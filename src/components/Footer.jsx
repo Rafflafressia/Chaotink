@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer>
-      <p>&copy; 2021</p>
+    <footer className="relative mx-auto border-t-2">
+      <p className="m-[10px]">Visit My Socials!</p>
     </footer>
   );
 }

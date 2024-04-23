@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 /* Media Queries */
-@media (min-width: 380px) {
-  /* Your styles here */
+@media (min-width: 1024px) {
+  .home__title {
+    font-size:4.5rem;
+    color: blue;
+  }
+
+  .home__image {
+    visibility: visible;
+  }
 }
