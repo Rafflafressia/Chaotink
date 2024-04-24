@@ -1,21 +1,27 @@
 const illustrations = [{
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: 'src/assets/IMG-20240404-WA0001.jpg',
 },
 {
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: 'src/assets/IMG-20240404-WA0003.jpg',
 },
 {
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: 'src/assets/IMG-20240408-WA0006.jpg',
 },
 {
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: 'src/assets/IMG-20240408-WA0010.jpg',
 },
 {
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: 'src/assets/IMG-20240409-WA0000.jpg',
 },
 {
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: 'src/assets/IMG-20240409-WA0004.jpg',
 },
+{
+    imageUrl: 'src/assets/IMG-20240418-WA0002.jpg',
+},
+{
+    imageUrl: 'src/assets/IMG-20240418-WA0007.jpg',
+}
 ];
 
 const IllustrationsCards = () => {
@@ -24,7 +30,7 @@ const IllustrationsCards = () => {
             {illustrations.map((illustration, index) => (
                 <div key={index} className="illustrations-card flex-row my-4 mx-4 space-x-2">
                     <div className="projImg">
-                        <img src={illustration && illustration.imageUrl} alt={illustration && illustration.title} />
+                        <img src={illustration.imageUrl} alt={`Illustration ${index}`} className="w-[150px] lg:w-[200px]"/>
                     </div>
                 </div>
             ))}

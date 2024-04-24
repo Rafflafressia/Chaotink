@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link 
             key={url}
             to={url} 
-            className={`nav-link text-sm xl:text-3xl ${currentPage === url ? 'active' : ''} rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:xl:bg-transparent hover:text-red-700 lg:text-2xl`}
+            className={`nav-link text-sm xl:text-3xl ${currentPage === url ? 'active text-cyan-300' : 'text-white'} rounded-lg px-3 py-2 font-medium hover:xl:bg-transparent lg:text-2xl`}
         >
             {title}
         </Link>

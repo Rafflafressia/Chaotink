@@ -13,7 +13,7 @@ const Portfolio = () => {
 
     return (
         <div>
-            <div className="md:my-[20px] lg:my-[100px] md:flex">
+            <div className="portfolio-container md:my-[20px] h-screen sm:h-screen lg:my-[100px] md:flex md:h-screen lg:h-[700px] xl:h-[883px] ">
                 <PortfolioSubNavigation 
                 categories={['Full Stack Development', 'Graphic Design', 'Illustration' ]}
                 onSelectCategory={handleCategorySelect} />

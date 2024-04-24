@@ -13,7 +13,7 @@ const GraphicDesignCards = () => {
     return (
         <div className="graphic-design-cards">
             {graphicDesignProjects.map((project, index) => (
-                <div key={index} className="graphic-design-card flex my-4 mx-4 space-x-2">
+                <div key={index} className="graphic-design-card flex my-4 mx-4 space-x-2 bg-cyan-950">
                     <div className="projImg">
                         <img src={project && project.imageUrl} alt={project && project.title} />
                     </div>
