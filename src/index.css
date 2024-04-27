@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 body {
-  background-color:rgb(21, 43, 53)
+  background-color: rgb(21, 43, 53);
 }
 
 /* Media Queries */
 @media (min-width: 1024px) {
   .home__title {
-    font-size:4.5rem;
+    font-size: 4.5rem;
     color: blue;
   }
 
