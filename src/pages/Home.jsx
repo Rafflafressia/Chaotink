@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <section className="home">
-      <div className="home__container h-[500px] md:h-screen lg:h-screen xl:h-[883px] md:flex flex-wrap flex-row text-center md:my-auto justify-center items-center">
+      <div className="home__container h-[550px] md:h-screen lg:h-screen xl:h-[883px] md:flex flex-wrap flex-row text-center md:my-auto justify-center items-center">
         <div className="relative top-[125px] md:top-[1px] mx-[20px] my-[20px] flex flex-col md:flex-row items-center space-x-12">
           <div>
             <h1 className="text-3xl font-bold text-white">
