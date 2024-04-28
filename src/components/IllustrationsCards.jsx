@@ -36,7 +36,8 @@ const illustrations = [
 
 const IllustrationsCards = () => {
   return (
-    <div className="illustrations-cards flex flex-wrap flex-row justify-center">
+    <div className="illustrations-cards flex flex-wrap flex-col justify-center items-center">
+      <h1 className="text-white text-2xl font-bold mt-6">Illustrations</h1>
       {illustrations.map((illustration, index) => (
         <div
           key={index}
