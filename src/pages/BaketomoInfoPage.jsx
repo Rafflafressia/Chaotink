@@ -95,15 +95,19 @@ const BaketomoInfoPage = () => {
         >
           <div className="flex justify-center bg-slate-50 mx-4 rounded-lg lg:py-4">
             <div className="text-left ml-24 mt-4">
-              <h1 className="text-6xl font-bold">Overview</h1>
-              <h3 className="text-3xl font-bold leading-[100px]">Summary</h3>
-              <p className="text-2xl">
+              <h1 className="lg:text-6xl font-bold">Overview</h1>
+              <h3 className="lg:text-3xl font-bold lg:leading-[100px]">
+                Summary
+              </h3>
+              <p className="lg:text-2xl">
                 Baketomo at its core is a game that allows players to collect
                 monsters by exploring a dungeon. Each dungeon run gives players
                 the opportunity to find unique monsters that can be captured.
               </p>
-              <h3 className="text-3xl font-bold leading-[100px]">Game Loop</h3>
-              <p className="text-2xl">
+              <h3 className="lg:text-3xl font-bold lg:leading-[100px]">
+                Game Loop
+              </h3>
+              <p className="lg:text-2xl">
                 The game loop for Baketomo is as follows:
                 <ol className="list-decimal list-inside">
                   <br />
@@ -133,7 +137,7 @@ const BaketomoInfoPage = () => {
             <img
               src={BaketomoLogin}
               alt="Baketomo Page 1"
-              className="lg:w-[425px] border-2 border-black mx-[20px] rounded-[25px] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
+              className="lg:w-[300px] border-2 border-black mx-[20px] rounded-[25px] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
             />
           </div>
         </section>
@@ -235,7 +239,7 @@ const BaketomoInfoPage = () => {
               <img
                 src={BaketomoLogo}
                 alt="Baketomo Logo"
-                className="lg:w-[600px] mx-auto cursor-pointer"
+                className="lg:w-[450px] mx-auto cursor-pointer"
                 onClick={goToBaketomoURL}
               />
             </div>
