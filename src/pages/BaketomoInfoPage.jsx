@@ -90,7 +90,7 @@ const BaketomoInfoPage = () => {
           </div>
         </section>
         <section
-          className="overview py-4 h-[775px] bg-white mt-0"
+          className="overview lg:py-4 lg:h-[775px] lg:bg-white lg:mt-0"
           id="overview"
         >
           <div className="flex justify-center bg-slate-50 mx-4 rounded-lg py-4">
@@ -133,12 +133,12 @@ const BaketomoInfoPage = () => {
             <img
               src={BaketomoLogin}
               alt="Baketomo Page 1"
-              className="w-[425px] border-2 border-black mx-[20px] rounded-[25px] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
+              className="lg:w-[425px] border-2 border-black mx-[20px] rounded-[25px] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
             />
           </div>
         </section>
         <section
-          className="first-five-minutes h-[785px] bg-white my-0"
+          className="first-five-minutes lg:h-[785px] lg:bg-white lg:my-0"
           id="first-five-minutes"
         >
           <div className="[background:#f2e9e4] py-6">
@@ -150,7 +150,7 @@ const BaketomoInfoPage = () => {
           </div>
         </section>
         <section
-          className="design-pillars flex items-center h-[700px] bg-white"
+          className="design-pillars lg:flex lg:items-center lg:h-[700px] lg:bg-white"
           id="design-pillars"
         >
           <div>
@@ -186,7 +186,7 @@ const BaketomoInfoPage = () => {
           </div>
         </section>
         <section
-          className="demo py-4 h-[750px]"
+          className="demo lg:py-4 lg:h-[750px]"
           id="demo"
           style={{
             backgroundImage: `url(${HomeBG})`,
@@ -194,11 +194,11 @@ const BaketomoInfoPage = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="backdrop-blur-[15px] flex justify-center items-center h-[700px] backdrop-filter bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-t-3xl my-2">
+          <div className="backdrop-blur-[15px] lg:flex justify-center items-center lg:h-[700px] backdrop-filter bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-t-3xl my-2">
             <img
               src={Signup}
               alt="Signup"
-              className="w-1/2 lg:w-[900px] ml-12 rounded-2xl"
+              className="lg:w-[900px] ml-12 rounded-2xl"
             />
             <div className="relative">
               <p
