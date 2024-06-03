@@ -59,7 +59,7 @@ const BaketomoInfoPage = () => {
               <img
                 src={BaketomoLogo}
                 alt="Baketomo Logo"
-                className="w-1/2 lg:w-[900px] mx-auto pt-12"
+                className="lg:w-[900px] mx-auto pt-12"
               />
               <p
                 className=" text-white text-4xl mx-36 p-12 text-center"
@@ -90,10 +90,10 @@ const BaketomoInfoPage = () => {
           </div>
         </section>
         <section
-          className="overview lg:py-4 lg:h-[775px] lg:bg-white lg:mt-0"
+          className="overview lg:h-[775px] lg:bg-white lg:mt-0"
           id="overview"
         >
-          <div className="flex justify-center bg-slate-50 mx-4 rounded-lg py-4">
+          <div className="flex justify-center bg-slate-50 mx-4 rounded-lg lg:py-4">
             <div className="text-left ml-24 mt-4">
               <h1 className="text-6xl font-bold">Overview</h1>
               <h3 className="text-3xl font-bold leading-[100px]">Summary</h3>
@@ -235,7 +235,7 @@ const BaketomoInfoPage = () => {
               <img
                 src={BaketomoLogo}
                 alt="Baketomo Logo"
-                className="w-1/2 lg:w-[600px] mx-auto cursor-pointer"
+                className="lg:w-[600px] mx-auto cursor-pointer"
                 onClick={goToBaketomoURL}
               />
             </div>
