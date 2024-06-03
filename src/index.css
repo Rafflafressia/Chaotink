@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: rgb(21, 43, 53);
+  background: linear-gradient(180deg, #0d292f 38.5%, #106f4c 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.nav-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.2);
 }
 
 /* Media Queries */
