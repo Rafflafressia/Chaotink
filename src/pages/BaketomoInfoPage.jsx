@@ -90,7 +90,7 @@ const BaketomoInfoPage = () => {
           </div>
         </section>
         <section
-          className="overview lg:h-[775px] lg:bg-white lg:mt-0"
+          className="overview lg:h-[825px] lg:bg-white lg:mt-0"
           id="overview"
         >
           <div className="flex justify-center bg-slate-50 mx-4 rounded-lg lg:py-4">
