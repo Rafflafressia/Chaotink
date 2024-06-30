@@ -8,6 +8,8 @@ import GithubIcon from "../assets/github-icon.svg";
 import DeploymentIcon from "../assets/deployed-icon.svg";
 import BackButton from "../components/BackButton";
 
+import { useEffect } from "react";
+
 const icon = {
   github: GithubIcon,
   deployment: DeploymentIcon,
@@ -67,6 +69,10 @@ const fullStackProjects = [
 ];
 
 const FullStackDevelopmentCards = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="mx-auto my-2 flex flex-col p-4 contain-content w-[400px] [background:#404040] lg:w-[1240px] lg:h-full border-b border-slate-600 rounded-2xl">
       <BackButton />

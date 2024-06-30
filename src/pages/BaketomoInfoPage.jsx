@@ -202,7 +202,7 @@ const BaketomoInfoPage = () => {
             <img
               src={Signup}
               alt="Signup"
-              className="lg:w-[900px] ml-12 rounded-2xl"
+              className="lg:w-[300px] ml-12 rounded-2xl"
             />
             <div className="relative">
               <p
