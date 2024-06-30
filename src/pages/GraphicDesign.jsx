@@ -7,6 +7,8 @@ import WindowGraphics from "../assets/window-graphics.png";
 import ProductPackaging from "../assets/product-packaging.png";
 import BackButton from "../components/BackButton";
 
+import { useEffect } from "react";
+
 const graphicDesignProjects = [
   {
     title: "Brochures",
@@ -53,6 +55,10 @@ const graphicDesignProjects = [
 ];
 
 const GraphicDesignCards = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="mx-auto my-2 flex flex-col p-4 contain-content w-[400px] [background:#404040] lg:w-[1240px] lg:h-full border-b border-slate-600 rounded-2xl">
       <div className="graphic-design-cards flex flex-col mx-auto items-center">

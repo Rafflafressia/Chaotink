@@ -22,7 +22,8 @@ const About = () => {
         <p className="mt-12 text-xl text-white mx-10 text-left lg:text-2xl">
           Currently, I'm working on a pet project called Baketomo. A creature
           collection game where you can collect, trade and battle creatures. You
-          can check out the project by clicking the button below.
+          can check out the project by clicking the button below. All
+          illustrations and UI designs are all done by me.
         </p>
         <Link
           to="/BaketomoInfoPage"
