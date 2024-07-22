@@ -67,16 +67,20 @@ const Home = () => {
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
 
+      <div className="">
+      <h1 className="text-left text-4xl font-bold">Case Studies</h1>
       <div className="case-studies overflow-hidden flex flex-col flex-wrap md:flex-row justify-center">
-      <CaseStudy img={<div className="w-[200px] h-[200px] bg-slate-900 md:w-[650px] md:h-[400px]"></div>} title={<h1 className="text-2xl"><strong>Case Study:</strong> Baketomo</h1>} description={"Baketomo is a web browswer game where players can collect monsters, go on dungeons and buy items."} />
-      <CaseStudy img={<div className="w-[200px] h-[200px] bg-slate-900 md:w-[650px] md:h-[400px]"></div>} title={<h1 className="text-2xl"><strong>Case Study:</strong> Baketomo</h1>} description={"Baketomo is a web browswer game where players can collect monsters, go on dungeons and buy items."} />
-      <CaseStudy img={<div className="w-[200px] h-[200px] bg-slate-900 md:w-[650px] md:h-[400px]"></div>} title={<h1 className="text-2xl"><strong>Case Study:</strong> Baketomo</h1>} description={"Baketomo is a web browswer game where players can collect monsters, go on dungeons and buy items."} />
-      <CaseStudy img={<div className="w-[200px] h-[200px] bg-slate-900 md:w-[650px] md:h-[400px]"></div>} title={<h1 className="text-2xl"><strong>Case Study:</strong> Baketomo</h1>} description={"Baketomo is a web browswer game where players can collect monsters, go on dungeons and buy items."} />
+      <CaseStudy img={<div className="w-[200px] h-[200px] bg-slate-900 md:w-[650px] md:h-[400px] rounded-[15px]"></div>} title={<h1 className="text-2xl"><strong>Case Study:</strong> Baketomo</h1>} description={"Baketomo is a web browswer game where players can collect monsters, go on dungeons and buy items."} />
+      <CaseStudy img={<div className="w-[200px] h-[200px] bg-slate-900 md:w-[650px] md:h-[400px] rounded-[15px]"></div>} title={<h1 className="text-2xl"><strong>Case Study:</strong> Baketomo</h1>} description={"Baketomo is a web browswer game where players can collect monsters, go on dungeons and buy items."} />
+      <CaseStudy img={<div className="w-[200px] h-[200px] bg-slate-900 md:w-[650px] md:h-[400px] rounded-[15px]"></div>} title={<h1 className="text-2xl"><strong>Case Study:</strong> Baketomo</h1>} description={"Baketomo is a web browswer game where players can collect monsters, go on dungeons and buy items."} />
+      <CaseStudy img={<div className="w-[200px] h-[200px] bg-slate-900 md:w-[650px] md:h-[400px] rounded-[15px]"></div>} title={<h1 className="text-2xl"><strong>Case Study:</strong> Baketomo</h1>} description={"Baketomo is a web browswer game where players can collect monsters, go on dungeons and buy items."} />
       </div>
+      </div>
+      
       
 
       <hr
-        className="visible md:mx-auto md:mt-12 md:w-full"
+        className="visible mt-12 md:mx-auto md:mt-12 md:w-full"
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
       <Footer />
