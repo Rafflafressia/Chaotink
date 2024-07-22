@@ -5,12 +5,8 @@ import "./index.css";
 import App from "./App.jsx";
 
 // Import Pages
-import Landing from "./pages/Landing";
-import GraphicDesign from "./pages/GraphicDesign";
-import FullStackDevelopment from "./pages/FullStackDevelopment";
-import Illustrations from "./pages/Illustrations";
+import Home from "./pages/Home";
 import Error from "./pages/Error";
-import BaketomoInfoPage from "./pages/BaketomoInfoPage";
 
 // Page routes
 const router = createBrowserRouter([
@@ -21,23 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Landing />,
-      },
-      {
-        path: "graphic-design",
-        element: <GraphicDesign />,
-      },
-      {
-        path: "web-dev",
-        element: <FullStackDevelopment />,
-      },
-      {
-        path: "illustrations",
-        element: <Illustrations />,
-      },
-      {
-        path: "BaketomoInfoPage",
-        element: <BaketomoInfoPage />,
+        element: <Home />,
       },
     ],
   },
