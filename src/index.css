@@ -6,11 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: linear-gradient(180deg, #0d292f 38.5%, #106f4c 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
+.no-scroll {
+  overflow: hidden;
 }
 
 .nav-icon {
@@ -26,9 +23,5 @@ body {
   .home__title {
     font-size: 4.5rem;
     color: blue;
-  }
-
-  .home__image {
-    visibility: visible;
   }
 }

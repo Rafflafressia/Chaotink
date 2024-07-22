@@ -1,32 +1,107 @@
 import { Link, useLocation } from "react-router-dom";
-import { HiMiniInformationCircle } from "react-icons/hi2";
-import { CgMenuGridR } from "react-icons/cg";
-import { IoMdContact } from "react-icons/io";
+import { useState, useEffect } from "react";
+import SiteLogo from "../assets/browser-icon.svg";
+
+import { IoMdCloseCircleOutline } from "react-icons/io";
+import { TiThMenu } from "react-icons/ti";
+import { SiLinkedin, SiGithub } from "react-icons/si";
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   const currentPage = useLocation().pathname;
+
+  const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
+
+  const goToLinkedIn = () => {
+    window.open(linkedInURL, "_blank");
+  };
+
+  const githubURL = "https://github.com/Rafflafressia";
+  const goToGithub = () => {
+    window.open(githubURL, "_blank");
+  };
+
   const pages = [
-    [
-      "About",
-      "#about",
-      <HiMiniInformationCircle size={60} className="nav-icon" />,
-    ],
-    ["Portfolio", "#portfolio", <CgMenuGridR size={60} className="nav-icon" />],
-    ["Contact", "#contact", <IoMdContact size={60} className="nav-icon" />],
+    ["About", "#about"],
+    ["Portfolio", "#portfolio"],
+    ["Contact", "#contact"],
   ];
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+  useEffect(() => {
+    if (showMenu) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    // Cleanup function to remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [showMenu]);
+
   return (
-    <nav className="flex justify-center w-0 h-0 invisible space-x-4 mx-auto md:w-full md:visible md:space-x-12 border-b-2 border-green-800 pb-32">
-      {pages.map(([title, url, img]) => (
-        <a
-          key={url}
-          href={url}
-          className={`nav-link hover:scale-125 ease-in duration-150 text-sm xl:text-3xl text-[#36DCA0] flex justify-center items-center rounded-full font-medium [background:#106f4c] w-[90px] h-[90px]`}
-          title={title}
-        >
-          {img}
-        </a>
-      ))}
-    </nav>
+    <div className="flex justify-center md:justify-between h-[35px] px-4 [background:#16425b] mx-auto w-full md:h-[60px] md:space-x-12 drop-shadow-md">
+      <img
+        src={SiteLogo}
+        alt="Site Logo"
+        className="relative h-[20px] md:visible md:h-[35px] my-auto"
+      />
+      <nav className="flex space-x-12 invisible md:visible">
+        {pages.map(([title, url]) => (
+          <a
+            key={url}
+            href={url}
+            className={`nav-link text-sm xl:text-3xl text-[#d9dcd6] flex items-center font-medium`}
+            title={title}
+          >
+            {title}
+          </a>
+        ))}
+      </nav>
+
+      <TiThMenu
+        className="text-[#d9dcd6] text-3xl cursor-pointer relative left-8 md:hidden"
+        onClick={toggleMenu}
+      />
+      {showMenu && (
+        <div className="fixed inset-0 justify-center items-center z-50  bg-white">
+          <button>
+            <IoMdCloseCircleOutline
+              className="text-3xl absolute top-4 right-4 text-[#16425b]"
+              onClick={toggleMenu}
+            />
+          </button>
+          <div className="bg-white h-screen w-screen rounded shadow-lg flex flex-col justify-center items-center">
+            <nav className="flex flex-col space-y-12 mt-4">
+              {pages.map(([title, url]) => (
+                <a
+                  key={url}
+                  href={url}
+                  className="text-3xl font-medium text-[#16425b]"
+                  onClick={toggleMenu} // Close modal when link is clicked
+                >
+                  {title}
+                </a>
+              ))}
+            </nav>
+            <div className="flex flex-row pt-12 space-x-7">
+              <button onClick={goToLinkedIn}>
+                <SiLinkedin className="text-4xl text-[#16425b] cursor-pointer" />
+              </button>
+              <button onClick={goToGithub}>
+                <SiGithub className="text-4xl text-[#16425b] cursor-pointer" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 export default Navbar;

@@ -2,16 +2,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect } from "react";
 
-import Carousel from "../components/Carousel";
-import BackButton from "../components/BackButton";
-import BaketomoNav from "../components/PresentationNav";
+import Carousel from "../Carousel";
+import BackButton from "../BackButton";
+import BaketomoNav from "../PresentationNav";
 
-import HomeBG from "../assets/baketomo_pics/my-room-bg.png";
-import BaketomoLogo from "../assets/baketomo_pics/baketomo-logo.svg";
-import BaketomoLogin from "../assets/baketomo_pics/baketomo_login.png";
-import Monsters from "../assets/baketomo_pics/monsters.svg";
-import Monster2 from "../assets/baketomo_pics/handsy-girl.svg";
-import Signup from "../assets/baketomo_pics/baketomo_signup.png";
+import HomeBG from "../../assets/baketomo_pics/my-room-bg.png";
+import BaketomoLogo from "../../assets/baketomo_pics/baketomo-logo.svg";
+import BaketomoLogin from "../../assets/baketomo_pics/baketomo_login.png";
+import Monsters from "../../assets/baketomo_pics/monsters.svg";
+import Monster2 from "../../assets/baketomo_pics/handsy-girl.svg";
+import Signup from "../../assets/baketomo_pics/baketomo_signup.png";
 
 const BaketomoInfoPage = () => {
   useEffect(() => {
