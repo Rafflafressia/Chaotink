@@ -13,11 +13,11 @@ const CaseStudy = ({img, title, description}) => {
 
 
 return (
-    <div className="mb-24">
+    <div>
         <Divider /> 
 
         {/* Hover Container */}
-        <div className="case-study md:relative md:overflow-hidden flex mb-12 md:mb-0 md:mt-12 mx-4 space-x-2 justify-center items-start">
+        <div className="case-study md:relative md:overflow-hidden flex mb-14 md:m-2 space-x-2 justify-center items-start">
             {img}
             <div className="description invisible w-[0px] h-[0px] md:w-[600px] md:h-[200px] md:absolute md:visible md:flex md:flex-col md:items-start md:p-4 md:justify-center md:bottom-0 rounded-[10px]">
                 <div className="flex flex-col justify-center items-start">
