@@ -16,7 +16,7 @@ const CaseStudy = ({ img, title, description, label }) => {
       <Divider />
 
       {/* Hover Container */}
-      <div className="case-study md:relative md:overflow-hidden flex mb-24 md:m-2 space-x-2 justify-center items-start">
+      <div className="case-study md:relative md:overflow-hidden flex mb-24 md:m-2 space-x-2 justify-center items-start rounded-[15px]">
         {img}
         <div className="description invisible w-[0px] h-[0px] md:w-[450px] md:h-[225px] md:absolute md:visible md:flex md:flex-col md:items-start md:px-4 md:justify-center md:bottom-0 rounded-[10px]">
           <div className="flex flex-col justify-center items-start">

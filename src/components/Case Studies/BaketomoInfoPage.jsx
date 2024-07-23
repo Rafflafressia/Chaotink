@@ -25,15 +25,6 @@ const BaketomoInfoPage = () => {
   };
   return (
     <div className="flex justify-center">
-      <div className="visible flex flex-col justify-center items-center h-screen w-screen lg:invisible lg:h-0 lg:w-0">
-        <h1 className="text-[80px] text-white font-bold">Oh! I'm so sorry!</h1>
-        <p className="text-3xl pt-12 text-white mx-12">
-          It looks like you're trying to view this on your phone or tablet.
-          Unfortunately, I haven't gotten around to optimizing this page for
-          that yet. If you view this page on a computer, I promise it'll be
-          worth your while!
-        </p>
-      </div>
       <BaketomoNav
         sections={[
           ["#home", "Home"],
@@ -44,9 +35,9 @@ const BaketomoInfoPage = () => {
           ["#future-plans", "Future Plans"],
         ]}
       />
-      <div className="invisible h-0 w-0 lg:visible lg:h-screen lg:w-screen">
+      <div className="h-screen w-screen">
         <section
-          className="py-4 h-[750px]"
+          className="py-4"
           id="home"
           style={{
             backgroundImage: `url(${HomeBG})`,
@@ -54,7 +45,7 @@ const BaketomoInfoPage = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="backdrop-blur-[15px] h-[700px] backdrop-filter bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-t-3xl my-2">
+          <div className="backdrop-blur-[15px] backdrop-filter bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-t-3xl my-2">
             <div className="relative">
               <img
                 src={BaketomoLogo}
@@ -62,7 +53,7 @@ const BaketomoInfoPage = () => {
                 className="lg:w-[900px] mx-auto pt-12"
               />
               <p
-                className=" text-white text-4xl mx-36 p-12 text-center"
+                className=" text-white text-2xl mx-12 p-4 md:text-4xl md:mx-36 md:p-12 md:text-center"
                 style={{
                   textShadow: `
                 -1px -1px 2px #023047,  
@@ -90,11 +81,11 @@ const BaketomoInfoPage = () => {
           </div>
         </section>
         <section
-          className="overview lg:h-[825px] lg:bg-white lg:mt-0"
+          className="overview bg-white"
           id="overview"
         >
           <div className="flex justify-center bg-slate-50 mx-4 rounded-lg lg:py-4">
-            <div className="text-left ml-24 mt-4">
+            <div className="text-left m-8 md:ml-24 mt-4">
               <h1 className="lg:text-6xl font-bold">Overview</h1>
               <h3 className="lg:text-3xl font-bold lg:leading-[100px]">
                 Summary
@@ -137,7 +128,7 @@ const BaketomoInfoPage = () => {
             <img
               src={BaketomoLogin}
               alt="Baketomo Page 1"
-              className="lg:w-[300px] border-2 border-black mx-[20px] rounded-[25px] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
+              className="invisible fixed md:relative md:visible md:h-1/2 border-2 border-black mx-[20px] rounded-[25px] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
             />
           </div>
         </section>
@@ -154,7 +145,7 @@ const BaketomoInfoPage = () => {
           </div>
         </section>
         <section
-          className="design-pillars lg:flex lg:items-center lg:h-[700px] lg:bg-white"
+          className="design-pillars lg:flex lg:items-center lg:bg-white"
           id="design-pillars"
         >
           <div>
@@ -186,11 +177,11 @@ const BaketomoInfoPage = () => {
             </p>
           </div>
           <div>
-            <img src={Monsters} alt="Monsters" className="w-[2000px]" />
+            <img src={Monsters} alt="Monsters" className="w-[2000px] p-4" />
           </div>
         </section>
         <section
-          className="demo lg:py-4 lg:h-[750px]"
+          className="demo py-4"
           id="demo"
           style={{
             backgroundImage: `url(${HomeBG})`,
@@ -198,15 +189,15 @@ const BaketomoInfoPage = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="backdrop-blur-[15px] lg:flex justify-center items-center lg:h-[700px] backdrop-filter bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-t-3xl my-2">
+          <div className="backdrop-blur-[15px] lg:flex justify-center items-center backdrop-filter bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-t-3xl my-2">
             <img
               src={Signup}
               alt="Signup"
-              className="lg:w-[300px] ml-12 rounded-2xl"
+              className="invisible fixed lg:visible lg:relative md:h-1/2 mx-12 rounded-2xl"
             />
             <div className="relative">
               <p
-                className=" text-white text-2xl mx-12 p-12 text-center"
+                className=" text-white md:text-2xl mx-4 p-6 md:mx-12 md:p-12 text-center"
                 style={{
                   textShadow: `
                 -1px -1px 2px #023047,  
@@ -239,20 +230,20 @@ const BaketomoInfoPage = () => {
               <img
                 src={BaketomoLogo}
                 alt="Baketomo Logo"
-                className="lg:w-[450px] mx-auto cursor-pointer"
+                className="mx-auto md:w-1/2 cursor-pointer p-4"
                 onClick={goToBaketomoURL}
               />
             </div>
           </div>
         </section>
-        <section className="future-plans py-4 h-[750px]" id="future-plans">
+        <section className="future-plans py-4" id="future-plans">
           <h1 className="text-6xl font-bold text-[#4a4e69] ml-12  pt-14">
             Future Development Plans{" "}
             <p className="text-3xl pt-4">Capture, Explore and Enhance</p>
           </h1>
           <h3 className="text-2xl pt-12 ml-12 font-bold">Capture</h3>
-          <div className="flex">
-            <div className="w-[1000px] ">
+          <div className="flex flex-col md:flex-row">
+            <div className="">
               {" "}
               <p className="ml-12">
                 Our current state of play gives the player the option to capture
@@ -285,7 +276,7 @@ const BaketomoInfoPage = () => {
             <img
               src={Monster2}
               alt="Monster2"
-              className="w-[600px] mx-[20px]"
+              className="md:w-[750px] mx-[20px]"
             />
           </div>
         </section>
