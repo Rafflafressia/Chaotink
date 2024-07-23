@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const CaseStudy = ({ img, title, description, label }) => {
@@ -22,10 +23,10 @@ const CaseStudy = ({ img, title, description, label }) => {
             {label}
             <h1 className="font-bold text-[25px] relative top-6">{title}</h1>
             <p className="text-left text-[15px] w-[400px] h-[100px] relative top-4 flex justify-start items-center">{description}</p>
-            <button className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-4">
+            <Link to={title} className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-4">
               <p className="mx-2 font-bold">See case study</p>{" "}
               <FaArrowRightLong />
-            </button>
+            </Link>
           </div>
         </div>
 

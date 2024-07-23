@@ -4,9 +4,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 
-// Import Pages
+// Import Main Pages
 import Home from "./pages/Home";
 import Error from "./pages/Error";
+import About from "./components/About/About.jsx";
+import Portfolio from "./components/Portfolio/Portfolio.jsx";
+import Contact from "./components/Contact/Contact.jsx";
+
+// Case Studies
+import Baketomo from "./components/Case Studies/BaketomoInfoPage.jsx"
+
 
 // Page routes
 const router = createBrowserRouter([
@@ -18,6 +25,22 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "About",
+        element: <About />,
+      },
+      {
+        path: "Portfolio",
+        element: <Portfolio />,
+      },
+      {
+        path: "Contact",
+        element: <Contact />,
+      },
+      {
+        path: "Baketomo",
+        element: <Baketomo />,
       },
     ],
   },

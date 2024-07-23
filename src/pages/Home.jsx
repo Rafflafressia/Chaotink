@@ -60,7 +60,7 @@ const Home = () => {
       <Navbar />
       <div className="flex flex-col pt-24 mx-auto items-center justify-center space-x-12 md:flex-row md:mx-96">
         <div className="">
-          <h1 className="text-3xl font-bold text-black md:text-[75px] md:text-center">
+          <h1 className="font-bold text-[50px] text-black md:leading-[75px] md:text-[75px] md:text-center">
             Arkaw <span className="text-[#3a7ca5]">Banerjee</span>
           </h1>
           <p className="text-black my-4 text-xl 2xl:mx-auto md:mt-11 2xl:text-[35px] 2xl:leading-10 md:text-center">
@@ -98,11 +98,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="">
           <img
             src={SitePhoto}
             alt="picture of profile"
-            className="sitePhoto flex-shrink-0 h-[0px] md:h-[500px] md:w-[900px] invisible md:visible"
+            className="sitePhoto h-[0px] mx-auto md:h-[500px] md:w-[900px] invisible md:visible"
           />
         </div>
       </div>
@@ -112,7 +112,7 @@ const Home = () => {
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
 
-      <div className="md:mx-96">
+      <div className="md:mx-96 mx-auto">
         <h1 className="invisible w-0 h-0 px-24 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible md:text-left md:text-5xl md:font-bold">
           Case Studies
         </h1>
