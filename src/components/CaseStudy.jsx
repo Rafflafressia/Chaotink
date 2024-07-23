@@ -17,11 +17,11 @@ const CaseStudy = ({ img, title, description, label }) => {
       {/* Hover Container */}
       <div className="case-study md:relative md:overflow-hidden flex mb-24 md:m-2 space-x-2 justify-center items-start">
         {img}
-        <div className="description invisible w-[0px] h-[0px] md:w-[450px] md:h-[225px] md:absolute md:visible md:flex md:flex-col md:items-start md:p-4 md:justify-center md:bottom-0 rounded-[10px]">
+        <div className="description invisible w-[0px] h-[0px] md:w-[450px] md:h-[225px] md:absolute md:visible md:flex md:flex-col md:items-start md:px-4 md:justify-center md:bottom-0 rounded-[10px]">
           <div className="flex flex-col justify-center items-start">
             {label}
-            <h1 className="my-2 font-bold text-[20px]">{title}</h1>
-            <p className="text-left text-[15px]">{description}</p>
+            <h1 className="font-bold text-[25px] relative top-6">{title}</h1>
+            <p className="text-left text-[15px] w-[400px] h-[100px] relative top-4 flex justify-start items-center">{description}</p>
             <button className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-4">
               <p className="mx-2 font-bold">See case study</p>{" "}
               <FaArrowRightLong />
