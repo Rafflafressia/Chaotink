@@ -23,9 +23,9 @@ const Navbar = () => {
   };
 
   const pages = [
-    ["About", "#about"],
-    ["Portfolio", "#portfolio"],
-    ["Contact", "#contact"],
+    ["About", "about"],
+    ["Portfolio", "portfolio"],
+    ["Contact", "contact"],
   ];
 
   const toggleMenu = () => {
@@ -46,22 +46,23 @@ const Navbar = () => {
   }, [showMenu]);
 
   return (
-    <div className="flex justify-center md:justify-between h-[35px] px-4 [background:#16425b] mx-auto w-full md:h-[60px] md:space-x-12 drop-shadow-md">
+    <div className="h-[35px] flex justify-center items-center px-4 [background:#16425b] mx-auto w-full md:h-[60px] drop-shadow-md">
+    <div className="flex h-[35px] md:h-[60px] justify-center md:justify-between md:space-x-12 md:w-[1280px]">
       <img
         src={SiteLogo}
         alt="Site Logo"
-        className="relative md:left-96 h-[20px] md:visible md:h-[35px] my-auto"
+        className="h-[20px] md:visible md:h-[35px] my-auto"
       />
-      <nav className="flex space-x-12 invisible md:visible md:relative md:right-96">
+      <nav className="flex space-x-12 invisible md:visible">
         {pages.map(([title, url]) => (
-          <a
+          <Link
             key={url}
-            href={url}
+            to={url}
             className={`nav-link text-sm md:text-lg text-[#d9dcd6] flex items-center font-medium`}
             title={title}
           >
             {title}
-          </a>
+          </Link>
         ))}
       </nav>
 
@@ -80,14 +81,14 @@ const Navbar = () => {
           <div className="bg-white h-screen w-screen rounded shadow-lg flex flex-col justify-center items-center">
             <nav className="flex flex-col space-y-12 mt-4">
               {pages.map(([title, url]) => (
-                <a
+                <Link
                   key={url}
-                  href={url}
+                  to={url}
                   className="text-3xl font-medium text-[#16425b]"
                   onClick={toggleMenu} // Close modal when link is clicked
                 >
                   {title}
-                </a>
+                </Link>
               ))}
             </nav>
             <div className="flex flex-row pt-12 space-x-7">
@@ -102,6 +103,8 @@ const Navbar = () => {
         </div>
       )}
     </div>
+    </div>
+    
   );
 };
 export default Navbar;
