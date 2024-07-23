@@ -57,7 +57,7 @@ const Navbar = () => {
           <a
             key={url}
             href={url}
-            className={`nav-link text-sm xl:text-3xl text-[#d9dcd6] flex items-center font-medium`}
+            className={`nav-link text-sm md:text-lg text-[#d9dcd6] flex items-center font-medium`}
             title={title}
           >
             {title}
