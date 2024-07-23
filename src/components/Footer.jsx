@@ -15,16 +15,16 @@ const Footer = () => {
   return (
     <footer className="flex mx-4 items-center justify-between p-2">
       <div>
-        <p className="text-[#16425b] text-xl font-semibold">
+        <p className="text-[#16425b] text-xl md:text-sm font-semibold">
           © 2024 Arkaw Banerjee
         </p>
       </div>
-      <div className="flex flex-row pt-8 space-x-7">
+      <div className="flex flex-row space-x-7">
         <button onClick={goToLinkedIn}>
-          <SiLinkedin className="text-4xl text-[#16425b] cursor-pointer" />
+          <SiLinkedin className="text-4xl md:text-2xl text-[#16425b] cursor-pointer" />
         </button>
         <button onClick={goToGithub}>
-          <SiGithub className="text-4xl text-[#16425b] cursor-pointer" />
+          <SiGithub className="text-4xl md:text-2xl text-[#16425b] cursor-pointer" />
         </button>
       </div>
     </footer>
