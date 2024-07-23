@@ -58,7 +58,7 @@ const Home = () => {
   return (
     <div className="home__container flex-wrap flex-row text-center justify-center items-center">
       <Navbar />
-      <div className="flex flex-col pt-24 mx-auto items-center justify-center space-x-12 md:flex-row md:mx-96">
+      <section className="flex flex-col pt-24 mx-auto items-center justify-center space-x-12 md:flex-row md:mx-96">
         <div className="">
           <h1 className="font-bold text-[50px] text-black md:leading-[75px] md:text-[75px] md:text-center">
             Arkaw <span className="text-[#3a7ca5]">Banerjee</span>
@@ -91,28 +91,28 @@ const Home = () => {
               <p>Connect with me on</p>
               <button
                 onClick={goToLinkedIn}
-                className="[background:#2f6690] rounded-[10px] text-[#d9dcd6] h-[40px] w-[100px] mx-2 lg:float-start"
+                className="[background:#2f6690] rounded-[10px] text-[#d9dcd6] h-[40px] w-[100px] mx-2 lg:float-start font-bold"
               >
                 LinkedIn
               </button>
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="flex flex-auto">
           <img
             src={SitePhoto}
             alt="picture of profile"
-            className="sitePhoto h-[0px] mx-auto md:h-[500px] md:w-[900px] invisible md:visible"
+            className="sitePhoto fixed lg:relative mx-auto invisible lg:visible"
           />
         </div>
-      </div>
+      </section>
 
       <hr
-        className="invisible md:visible md:mx-auto md:mt-12 md:w-full"
+        className="invisible md:visible md:mx-96 md:mt-12"
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
 
-      <div className="md:mx-96 mx-auto">
+      <section className="md:mx-96 mx-auto">
         <h1 className="invisible w-0 h-0 px-24 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible md:text-left md:text-5xl md:font-bold">
           Case Studies
         </h1>
@@ -125,7 +125,7 @@ const Home = () => {
                   <img
                     src={Object.values(study.img)}
                     alt={study.title}
-                    className="w-[200px] h-[200px] md:w-[500px] md:h-[350px] rounded-[10px]"
+                    className="w-[200px] h-[200px] md:w-[500px] md:h-[350px] rounded-[10px] drop-shadow-lg"
                   />
                 )
               }
@@ -141,7 +141,7 @@ const Home = () => {
             />
           ))}
         </div>
-      </div>
+      </section>
 
       <hr
         className="visible mt-12 md:mx-auto md:mt-12 md:w-full"
