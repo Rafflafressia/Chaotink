@@ -50,9 +50,9 @@ const Navbar = () => {
       <img
         src={SiteLogo}
         alt="Site Logo"
-        className="relative h-[20px] md:visible md:h-[35px] my-auto"
+        className="relative md:left-96 h-[20px] md:visible md:h-[35px] my-auto"
       />
-      <nav className="flex space-x-12 invisible md:visible">
+      <nav className="flex space-x-12 invisible md:visible md:relative md:right-96">
         {pages.map(([title, url]) => (
           <a
             key={url}
