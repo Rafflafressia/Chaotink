@@ -7,7 +7,8 @@ import CaseStudy from "../components/CaseStudy";
 import Answerables from "../assets/answerables-card.png";
 import Baketomo from "../assets/mobile-game-card.png";
 import StarInventory from "../assets/full-stack-card.png";
-import GraphicDesign from "../assets/graphic-design-card.png";
+import SoldBig from "../assets/graphic-design-card.png";
+import PremiumCustom from "../assets/premium-custom-card.png"
 
 const Home = () => {
   const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
@@ -32,11 +33,18 @@ const Home = () => {
         "A CMS application for inventory management for small businesses. Organize your products, track sales and manage your inventory.",
     },
     {
-      img: { GraphicDesign },
+      img: { SoldBig },
       label: "GRAPHIC DESIGN",
-      title: "Premium Custom Surfacing",
+      title: "SoldBig Realty",
       description:
-        "Designed, printed and wrapped 4 trucks and a trailer for a local business.",
+        "Designed and printed 10, 000 brochures for SoldBig Realty to help promote their real estate brand.",
+    },
+    {
+      img: { PremiumCustom },
+      label: "GRAPHIC DESIGN",
+      title: "Premier Custom Surfacing",
+      description:
+        "Designed, printed and wrapped 8 trucks and 1 trailer.",
     },
     {
       img: { Answerables },
@@ -50,7 +58,7 @@ const Home = () => {
   return (
     <div className="home__container flex-wrap flex-row text-center justify-center items-center">
       <Navbar />
-      <div className="flex flex-col pt-24 mx-auto items-center justify-center space-x-12 md:flex-row">
+      <div className="flex flex-col pt-24 mx-auto items-center justify-center space-x-12 md:flex-row md:mx-96">
         <div className="">
           <h1 className="text-3xl font-bold text-black md:text-[75px] md:text-center">
             Arkaw <span className="text-[#3a7ca5]">Banerjee</span>
@@ -94,7 +102,7 @@ const Home = () => {
           <img
             src={SitePhoto}
             alt="picture of profile"
-            className="sitePhoto flex-shrink-0 h-[0px] md:h-[500px] invisible md:visible"
+            className="sitePhoto flex-shrink-0 h-[0px] md:h-[500px] md:w-[900px] invisible md:visible"
           />
         </div>
       </div>
@@ -104,7 +112,7 @@ const Home = () => {
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
 
-      <div className="">
+      <div className="md:mx-96">
         <h1 className="invisible w-0 h-0 px-24 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible md:text-left md:text-5xl md:font-bold">
           Case Studies
         </h1>
@@ -117,7 +125,7 @@ const Home = () => {
                   <img
                     src={Object.values(study.img)}
                     alt={study.title}
-                    className="w-[200px] h-[200px] md:w-[600px] md:h-[400px] rounded-[10px]"
+                    className="w-[200px] h-[200px] md:w-[500px] md:h-[350px] rounded-[10px]"
                   />
                 )
               }
