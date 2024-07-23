@@ -23,7 +23,7 @@ const Home = () => {
       label: "FULL STACK WEB DEVELOPMENT",
       title: "Baketomo",
       description:
-        "Baketomo is a web browser game where players can collect monsters, go on dungeons and buy items.",
+        "Baketomo is a web browser game that takes insipiration from Pokemon and Neopets. Players can collect monsters, explore dungeons to expand their collection and buy items.",
     },
     {
       img: { StarInventory },
@@ -37,14 +37,14 @@ const Home = () => {
       label: "GRAPHIC DESIGN",
       title: "SoldBig Realty",
       description:
-        "Designed and printed 10, 000 brochures for SoldBig Realty to help promote their real estate brand.",
+        "Designed and printed 10, 000 brochures for SoldBig Realty to help promote their real estate brand. SoldBig Realty is a real estate firm that operates in the GTA.",
     },
     {
       img: { PremiumCustom },
       label: "GRAPHIC DESIGN",
       title: "Premier Custom Surfacing",
       description:
-        "Designed, printed and wrapped 8 trucks and 1 trailer.",
+        "Designed, printed and wrapped 8 trucks and 1 trailer. Premium Custom Surfacing or Playsafe Canada specializes in rubberized pour-in surfaces.",
     },
     {
       img: { Answerables },
@@ -131,7 +131,7 @@ const Home = () => {
               }
               label={
                 study.label && (
-                  <label className="text-[12px] tracking-wider">
+                  <label className="relative top-4 text-[12px] tracking-wider">
                     {study.label}
                   </label>
                 )
