@@ -71,7 +71,7 @@ const Navbar = () => {
           onClick={toggleMenu}
         />
         {showMenu && (
-          <div className="fixed inset-0 justify-center items-center z-50  bg-white">
+          <div className="absolute inset-0 justify-center items-center z-50  bg-white">
             <button>
               <IoMdCloseCircleOutline
                 className="text-3xl absolute top-4 right-4 text-[#16425b]"
