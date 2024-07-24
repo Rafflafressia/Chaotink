@@ -24,7 +24,7 @@ const BaketomoInfoPage = () => {
     window.open(BaketomoURL, "_blank");
   };
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mx-auto">
       <BaketomoNav
         sections={[
           ["#home", "Home"],
@@ -35,7 +35,7 @@ const BaketomoInfoPage = () => {
           ["#future-plans", "Future Plans"],
         ]}
       />
-      <div className="h-screen w-screen">
+      <div className="h-full w-full">
         <section
           className="py-4"
           id="home"
@@ -43,6 +43,7 @@ const BaketomoInfoPage = () => {
             backgroundImage: `url(${HomeBG})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div className="backdrop-blur-[15px] backdrop-filter bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-t-3xl my-2">
@@ -80,10 +81,7 @@ const BaketomoInfoPage = () => {
             </div>
           </div>
         </section>
-        <section
-          className="overview bg-white"
-          id="overview"
-        >
+        <section className="overview bg-white" id="overview">
           <div className="flex justify-center bg-slate-50 mx-4 rounded-lg lg:py-4">
             <div className="text-left m-8 md:ml-24 mt-4">
               <h1 className="lg:text-6xl font-bold">Overview</h1>
@@ -128,7 +126,7 @@ const BaketomoInfoPage = () => {
             <img
               src={BaketomoLogin}
               alt="Baketomo Page 1"
-              className="invisible fixed md:relative md:visible md:h-1/2 border-2 border-black mx-[20px] rounded-[25px] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
+              className="invisible fixed lg:relative lg:visible lg:h-1/2 lg:border-2 lg:border-black lg:mx-[20px] lg:rounded-[25px] lg:shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
             />
           </div>
         </section>
@@ -177,7 +175,7 @@ const BaketomoInfoPage = () => {
             </p>
           </div>
           <div>
-            <img src={Monsters} alt="Monsters" className="w-[2000px] p-4" />
+            <img src={Monsters} alt="Monsters" className="w-[2000px] p-2" />
           </div>
         </section>
         <section
@@ -193,7 +191,7 @@ const BaketomoInfoPage = () => {
             <img
               src={Signup}
               alt="Signup"
-              className="invisible fixed lg:visible lg:relative md:h-1/2 mx-12 rounded-2xl"
+              className="invisible fixed lg:visible lg:relative md:h-1/2 lg:mx-12 rounded-2xl"
             />
             <div className="relative">
               <p
@@ -281,7 +279,6 @@ const BaketomoInfoPage = () => {
           </div>
         </section>
       </div>
-      <BackButton />
     </div>
   );
 };
