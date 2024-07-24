@@ -17,6 +17,12 @@ const Home = () => {
     window.open(linkedInURL, "_blank");
   };
 
+  const pages = [
+    ["About", "about"],
+    ["Portfolio", "portfolio"],
+    ["Contact", "contact"],
+  ];
+
   const caseStudies = [
     {
       img: { Baketomo },
@@ -57,7 +63,7 @@ const Home = () => {
 
   return (
     <div className="home__container flex-wrap flex-row text-center justify-center items-center">
-      <Navbar />
+      <Navbar pages={pages}/>
       <section className="flex flex-col pt-24 mx-1 items-center justify-center space-x-12 lg:flex-row md:mx-24">
         <div className="">
           <h1 className="font-bold text-[50px] text-black md:leading-[75px] md:text-[75px] md:text-center">
