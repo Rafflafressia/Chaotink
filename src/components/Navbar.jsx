@@ -6,7 +6,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
-const Navbar = () => {
+const Navbar = ({pages}) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const currentPage = useLocation().pathname;
@@ -21,12 +21,6 @@ const Navbar = () => {
   const goToGithub = () => {
     window.open(githubURL, "_blank");
   };
-
-  const pages = [
-    ["About", "about"],
-    ["Portfolio", "portfolio"],
-    ["Contact", "contact"],
-  ];
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);

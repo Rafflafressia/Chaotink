@@ -14,13 +14,13 @@ const Carousel = ({images}) => {
 
   return (
     <div className="carousel-container">
-      <Slider {...settings} arrows={false}>
+      <Slider {...settings} arrows={false} dots={false}>
         {images.map((image, index) => (
           <div key={index}>
             <img
               src={image}
               alt={`Slide ${index}`}
-              className="mx-auto w-[875px] rounded-3xl shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)]"
+              className="mx-auto w-[875px] rounded-3xl shadow-md"
             />
           </div>
         ))}
