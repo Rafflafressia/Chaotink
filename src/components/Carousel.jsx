@@ -1,9 +1,6 @@
 import Slider from "react-slick";
-import F5Minute_1 from "../assets/baketomo_pics/baketomo_1.jpg";
-import F5Minute_2 from "../assets/baketomo_pics/baketomo_2.jpg";
-import F5Minute_3 from "../assets/baketomo_pics/baketomo_3.jpg";
 
-const Carousel = () => {
+const Carousel = ({images}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -15,11 +12,9 @@ const Carousel = () => {
     pauseOnHover: true,
   };
 
-  const images = [F5Minute_1, F5Minute_2, F5Minute_3];
-
   return (
     <div className="carousel-container">
-      <Slider {...settings}>
+      <Slider {...settings} arrows={false}>
         {images.map((image, index) => (
           <div key={index}>
             <img
