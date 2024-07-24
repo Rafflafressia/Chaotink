@@ -47,64 +47,63 @@ const Navbar = () => {
 
   return (
     <div className="h-[35px] flex justify-center items-center px-4 [background:#16425b] mx-auto w-full md:h-[60px] drop-shadow-md">
-    <div className="flex h-[35px] md:h-[60px] justify-center md:justify-between md:space-x-12 md:w-[1280px]">
-      <img
-        src={SiteLogo}
-        alt="Site Logo"
-        className="h-[20px] md:visible md:h-[35px] my-auto"
-      />
-      <nav className="flex space-x-12 invisible md:visible">
-        {pages.map(([title, url]) => (
-          <Link
-            key={url}
-            to={url}
-            className={`nav-link text-sm md:text-lg text-[#d9dcd6] flex items-center font-medium`}
-            title={title}
-          >
-            {title}
-          </Link>
-        ))}
-      </nav>
+      <div className="flex h-[35px] md:h-[60px] justify-center md:justify-between md:space-x-12 md:w-[1280px]">
+        <img
+          src={SiteLogo}
+          alt="Site Logo"
+          className="h-[20px] md:visible md:h-[35px] my-auto"
+        />
+        <nav className="flex space-x-12 invisible md:visible">
+          {pages.map(([title, url]) => (
+            <Link
+              key={url}
+              to={url}
+              className={`nav-link text-sm md:text-lg text-[#d9dcd6] flex items-center font-medium`}
+              title={title}
+            >
+              {title}
+            </Link>
+          ))}
+        </nav>
 
-      <TiThMenu
-        className="text-[#d9dcd6] text-3xl cursor-pointer relative left-8 md:hidden"
-        onClick={toggleMenu}
-      />
-      {showMenu && (
-        <div className="fixed inset-0 justify-center items-center z-50  bg-white">
-          <button>
-            <IoMdCloseCircleOutline
-              className="text-3xl absolute top-4 right-4 text-[#16425b]"
-              onClick={toggleMenu}
-            />
-          </button>
-          <div className="bg-white h-screen w-screen rounded shadow-lg flex flex-col justify-center items-center">
-            <nav className="flex flex-col space-y-12 mt-4">
-              {pages.map(([title, url]) => (
-                <Link
-                  key={url}
-                  to={url}
-                  className="text-3xl font-medium text-[#16425b]"
-                  onClick={toggleMenu} // Close modal when link is clicked
-                >
-                  {title}
-                </Link>
-              ))}
-            </nav>
-            <div className="flex flex-row pt-12 space-x-7">
-              <button onClick={goToLinkedIn}>
-                <SiLinkedin className="text-4xl text-[#16425b] cursor-pointer" />
-              </button>
-              <button onClick={goToGithub}>
-                <SiGithub className="text-4xl text-[#16425b] cursor-pointer" />
-              </button>
+        <TiThMenu
+          className="text-[#d9dcd6] text-3xl cursor-pointer relative md:hidden"
+          onClick={toggleMenu}
+        />
+        {showMenu && (
+          <div className="fixed inset-0 justify-center items-center z-50  bg-white">
+            <button>
+              <IoMdCloseCircleOutline
+                className="text-3xl absolute top-4 right-4 text-[#16425b]"
+                onClick={toggleMenu}
+              />
+            </button>
+            <div className="bg-white h-screen w-screen rounded shadow-lg flex flex-col justify-center items-center">
+              <nav className="flex flex-col space-y-12 mt-4">
+                {pages.map(([title, url]) => (
+                  <Link
+                    key={url}
+                    to={url}
+                    className="text-3xl font-medium text-[#16425b]"
+                    onClick={toggleMenu} // Close modal when link is clicked
+                  >
+                    {title}
+                  </Link>
+                ))}
+              </nav>
+              <div className="flex flex-row pt-12 space-x-7">
+                <button onClick={goToLinkedIn}>
+                  <SiLinkedin className="text-4xl text-[#16425b] cursor-pointer" />
+                </button>
+                <button onClick={goToGithub}>
+                  <SiGithub className="text-4xl text-[#16425b] cursor-pointer" />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
-    </div>
-    
   );
 };
 export default Navbar;
