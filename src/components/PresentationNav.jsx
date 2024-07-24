@@ -16,7 +16,7 @@ const BaketomoNav = ({ sections }) => {
   };
 
   return (
-    <nav className="invisible h-0 w-0 lg:h-auto lg:w-auto lg:visible lg:space-x-4 lg:fixed lg:mt-2 lg:rounded-xl lg:p-2 lg:z-10 lg:bg-slate-100 ">
+    <nav className="mx-auto invisible md:visible md:m-2 md:p-2 space-x-2 fixed rounded-xl z-10 bg-slate-100 md:shadow-md">
       {sections.map(([url, title]) => (
         <a
           key={url}
