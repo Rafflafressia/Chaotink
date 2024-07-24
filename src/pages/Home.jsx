@@ -8,7 +8,7 @@ import Answerables from "../assets/answerables-card.png";
 import Baketomo from "../assets/mobile-game-card.png";
 import StarInventory from "../assets/full-stack-card.png";
 import SoldBig from "../assets/graphic-design-card.png";
-import PremiumCustom from "../assets/premium-custom-card.png"
+import PremiumCustom from "../assets/premium-custom-card.png";
 
 const Home = () => {
   const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
@@ -58,7 +58,7 @@ const Home = () => {
   return (
     <div className="home__container flex-wrap flex-row text-center justify-center items-center">
       <Navbar />
-      <section className="flex flex-col pt-24 mx-auto items-center justify-center space-x-12 md:flex-row md:mx-96">
+      <section className="flex flex-col pt-24 mx-1 items-center justify-center space-x-12 lg:flex-row md:mx-24">
         <div className="">
           <h1 className="font-bold text-[50px] text-black md:leading-[75px] md:text-[75px] md:text-center">
             Arkaw <span className="text-[#3a7ca5]">Banerjee</span>
@@ -98,25 +98,23 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-auto">
-          <img
-            src={SitePhoto}
-            alt="picture of profile"
-            className="sitePhoto fixed lg:relative mx-auto invisible lg:visible"
-          />
-        </div>
+        <img
+          src={SitePhoto}
+          alt="picture of profile"
+          className="sitePhoto fixed xl:relative lg:w-1/2 invisible xl:visible"
+        />
       </section>
 
       <hr
-        className="invisible md:visible md:mx-96 md:mt-12"
+        className="visible my-6 md:mx-24 md:mt-12"
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
 
-      <section className="md:mx-96 mx-auto">
-        <h1 className="invisible w-0 h-0 px-24 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible md:text-left md:text-5xl md:font-bold">
+      <section className="mx-2 md:mx-24 lg:mx-36">
+        <h1 className="invisible w-0 h-0 px-24 sm:text-center sm:mx-auto sm:px-0 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible xl:text-left md:text-5xl md:font-bold">
           Case Studies
         </h1>
-        <div className="case-studies overflow-hidden flex flex-col flex-wrap md:flex-row justify-center">
+        <div className="case-studies overflow-hidden flex flex-col flex-wrap md:flex-row justify-center lg:space-y-8">
           {caseStudies.map((study, index) => (
             <CaseStudy
               key={index}
@@ -125,7 +123,7 @@ const Home = () => {
                   <img
                     src={Object.values(study.img)}
                     alt={study.title}
-                    className="w-[200px] h-[200px] md:w-[500px] md:h-[350px] rounded-[10px] drop-shadow-lg"
+                    className="w-[200px] h-[200px] lg:w-[500px] lg:h-[350px] rounded-[10px] drop-shadow-lg"
                   />
                 )
               }
