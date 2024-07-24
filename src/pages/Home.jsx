@@ -111,7 +111,7 @@ const Home = () => {
       ></hr>
 
       <section className="mx-2 md:mx-24 lg:mx-36">
-        <h1 className="invisible w-0 h-0 px-24 sm:text-center sm:mx-auto sm:px-0 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible xl:text-left md:text-5xl md:font-bold">
+        <h1 className="invisible w-0 h-0 px-24 sm:text-center sm:mx-auto sm:px-0 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible 2xl:text-[60px] md:text-5xl md:font-bold">
           Case Studies
         </h1>
         <div className="case-studies overflow-hidden flex flex-col flex-wrap md:flex-row justify-center">
