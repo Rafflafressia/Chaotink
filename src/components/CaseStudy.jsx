@@ -5,16 +5,15 @@ const CaseStudy = ({ img, title, description, label }) => {
   const Divider = () => {
     return (
       <hr
-        className="visible w-full mx-auto my-12 md:mb-4 md:mt-0 lg:my-0 lg:invisible lg:w-0 lg:h-0 lg:mx-0"
+        className="visible w-full mx-auto my-12 sm:my-6 md:mb-4 md:mt-0 lg:my-0 lg:invisible lg:w-0 lg:h-0 lg:mx-0"
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
     );
   };
 
   return (
-    <div>
-      {/* Hover Container */}
-      <div className="case-study md:relative md:overflow-hidden flex mb-40 md:mb-0 space-x-2 justify-center items-start rounded-[15px]">
+    <div className="lg:m-1">
+      <div className="case-study lg:relative lg:overflow-hidden flex mb-40 sm:mb-12 md:mb-0 space-x-2 justify-center items-start rounded-[15px]">
         {img}
         <div className="description invisible fixed lg:w-[450px] lg:h-[225px] lg:absolute lg:visible lg:flex lg:flex-col lg:items-start lg:px-4 lg:justify-center lg:bottom-0 rounded-[10px]">
           <div className="flex flex-col justify-center items-start">
@@ -33,7 +32,7 @@ const CaseStudy = ({ img, title, description, label }) => {
           </div>
         </div>
 
-        <div className="visible w-[200px] h-[200px] sm:w-[275px] sm:h-[250px] lg:invisible lg:w-[0px] lg:h-[0px]">
+        <div className="visible w-[200px] h-[250px] sm:w-[275px] sm:h-[250px] lg:invisible lg:w-[0px] lg:h-[0px]">
           <h1 className="mb-4 font-bold text-2xl md:mb-0">{title}</h1>
           <div className="flex flex-col justify-center">
             <p>{description}</p>

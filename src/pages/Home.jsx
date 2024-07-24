@@ -101,7 +101,7 @@ const Home = () => {
         <img
           src={SitePhoto}
           alt="picture of profile"
-          className="sitePhoto fixed xl:relative lg:w-1/2 invisible xl:visible"
+          className="sitePhoto fixed xl:relative lg:w-[600px] invisible xl:visible"
         />
       </section>
 
@@ -114,7 +114,7 @@ const Home = () => {
         <h1 className="invisible w-0 h-0 px-24 sm:text-center sm:mx-auto sm:px-0 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible xl:text-left md:text-5xl md:font-bold">
           Case Studies
         </h1>
-        <div className="case-studies overflow-hidden flex flex-col flex-wrap md:flex-row justify-center lg:space-y-8">
+        <div className="case-studies overflow-hidden flex flex-col flex-wrap md:flex-row justify-center">
           {caseStudies.map((study, index) => (
             <CaseStudy
               key={index}
@@ -123,7 +123,7 @@ const Home = () => {
                   <img
                     src={Object.values(study.img)}
                     alt={study.title}
-                    className="w-[200px] h-[200px] lg:w-[500px] lg:h-[350px] rounded-[10px] drop-shadow-lg"
+                    className="w-[200px] h-[200px] lg:w-[500px] lg:h-[350px] rounded-[10px] shadow-md md:shadow-lg"
                   />
                 )
               }
