@@ -13,6 +13,7 @@ import Contact from "./components/Contact/Contact.jsx";
 
 // Case Studies
 import Baketomo from "./components/Case Studies/BaketomoInfoPage.jsx"
+import StarInventory from "./components/Case Studies/StarInventoryPage.jsx";
 
 
 // Page routes
@@ -39,8 +40,12 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "Baketomo",
+        path: "Bake",
         element: <Baketomo />,
+      },
+      {
+        path: "Star",
+        element: <StarInventory />,
       },
     ],
   },
