@@ -6,7 +6,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
-const Navbar = ({pages}) => {
+const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const currentPage = useLocation().pathname;
@@ -39,14 +39,23 @@ const Navbar = ({pages}) => {
     };
   }, [showMenu]);
 
+  const pages = [
+    ["About", "about"],
+    ["Portfolio", "portfolio"],
+    ["Contact", "contact"],
+  ];
+
   return (
     <div className="h-[35px] flex justify-center items-center px-4 [background:#16425b] mx-auto w-full md:h-[60px] drop-shadow-md">
       <div className="flex h-[35px] md:h-[60px] justify-center md:justify-between md:space-x-12 md:w-[1280px]">
-        <img
-          src={SiteLogo}
-          alt="Site Logo"
-          className="h-[20px] md:visible md:h-[35px] my-auto"
-        />
+        <Link to="/" className="flex items-center">
+          <img
+            src={SiteLogo}
+            alt="Site Logo"
+            className="h-[20px] md:visible md:h-[35px] my-auto"
+          />
+        </Link>
+
         <nav className="flex space-x-12 invisible md:visible">
           {pages.map(([title, url]) => (
             <Link
@@ -65,7 +74,7 @@ const Navbar = ({pages}) => {
           onClick={toggleMenu}
         />
         {showMenu && (
-          <div className="absolute inset-0 justify-center items-center z-50  bg-white">
+          <div className="menu absolute inset-0 justify-center items-center  bg-white">
             <button>
               <IoMdCloseCircleOutline
                 className="text-3xl absolute top-4 right-4 text-[#16425b]"

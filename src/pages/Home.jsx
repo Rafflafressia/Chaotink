@@ -17,12 +17,6 @@ const Home = () => {
     window.open(linkedInURL, "_blank");
   };
 
-  const pages = [
-    ["About", "about"],
-    ["Portfolio", "portfolio"],
-    ["Contact", "contact"],
-  ];
-
   const caseStudies = [
     {
       img: { Baketomo },
@@ -63,8 +57,7 @@ const Home = () => {
 
   return (
     <div className="home__container flex-wrap flex-row text-center justify-center items-center">
-      <Navbar pages={pages}/>
-      <section className="flex flex-col pt-24 mx-1 items-center justify-center space-x-12 lg:flex-row md:mx-24">
+      <section className="flex flex-col pt-24 mx-1 items-center justify-center space-x-12 lg:flex-row xl:mx-96">
         <div className="">
           <h1 className="font-bold text-[50px] text-black md:leading-[75px] md:text-[75px] md:text-center">
             Arkaw <span className="text-[#3a7ca5]">Banerjee</span>
@@ -116,7 +109,7 @@ const Home = () => {
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
 
-      <section className="mx-2 md:mx-24 lg:mx-36">
+      <section className="mx-2 md:mx-24 xl:mx-36 2xl:mx-96">
         <h1 className="invisible w-0 h-0 px-24 sm:text-center sm:mx-auto sm:px-0 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible 2xl:text-[60px] md:text-5xl md:font-bold">
           Case Studies
         </h1>
