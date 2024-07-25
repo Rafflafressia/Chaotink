@@ -32,34 +32,8 @@ const BaketomoInfoPage = () => {
 
   const images = [F5Minute_1, F5Minute_2, F5Minute_3];
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div>
-      <div className="flex justify-center">
-        <BaketomoNav
-          sections={[
-            ["#home", "Home"],
-            ["#overview", "Overview"],
-            ["#first-five-minutes", "First Five Minutes"],
-            ["#design-pillars", "Design Pillars"],
-            ["#demo", "Demo"],
-            ["#future-plans", "Future Plans"],
-          ]}
-        />
-      </div>
       <div
         className="w-full py-12"
         id="home"
@@ -70,7 +44,7 @@ const BaketomoInfoPage = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex flex-col justify-center items-center backdrop-blur-[15px] backdrop-filter bg-green-900 bg-opacity-10 mx-4 md:mx-12 lg:mx-36 shadow-md rounded-[10px] my-2 p-4 space-y-4">
+        <div className="glass flex flex-col justify-center items-center shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] bg-green-900 mx-4 md:mx-12 lg:mx-36 rounded-[10px] my-2 p-4 space-y-4">
           <img
             src={BaketomoLogo}
             alt="Baketomo Logo"
@@ -103,7 +77,7 @@ const BaketomoInfoPage = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-row justify-center items-center lg:my-8">
+      <div className="flex flex-row justify-center items-center lg:my-8 md:mx-12 xl:mx-36">
         <div className="flex flex-col justify-center items-start">
           <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">
             Summary
@@ -143,16 +117,16 @@ const BaketomoInfoPage = () => {
         <img
           src={BaketomoLogin}
           alt="Baketomo Page 1"
-          className="invisible fixed lg:relative lg:visible lg:w-3/12 lg:border-2 lg:border-black lg:mx-[20px] lg:rounded-[25px] lg:shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] pb-4"
+          className="invisible fixed mx-8 lg:relative lg:visible lg:w-3/12 xl:w-5/12 lg:border-2 lg:border-black lg:rounded-[25px] lg:shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)]"
         />
       </div>
       <div className="border-t-[0.5px] border-gray p-2 m-2">
-        <h1 className="text-3xl font-bold m-4 text-[#4a4e69] xl:text-[40px] xl:m-8">
+        <h1 className="text-3xl font-bold m-4 text-[#4a4e69] xl:text-[40px] md:mx-12 lg:mx-36">
           First 5-Minutes
         </h1>
         <Carousel images={images} />
       </div>
-      <div className="flex flex-col border-t-[0.5px] border-gray p-2 m-2 lg:flex-row">
+      <div className="flex flex-col border-t-[0.5px] border-gray p-2 m-2 xl:flex-row md:mx-12 lg:mx-12 xl:mx-36">
         <div>
           <h1 className="text-4xl font-bold text-[#4a4e69]">
             Design Pillars{" "}
@@ -188,7 +162,11 @@ const BaketomoInfoPage = () => {
           </div>
         </div>
 
-        <img src={Monsters} alt="Monsters" className="p-2 lg:w-1/2" />
+        <img
+          src={Monsters}
+          alt="Monsters"
+          className="p-2 md:w-10/12 xl:w-1/2"
+        />
       </div>
 
       <div
@@ -207,7 +185,7 @@ const BaketomoInfoPage = () => {
             alt="Signup"
             className="invisible fixed lg:visible lg:relative md:h-1/2 lg:mx-12 rounded-2xl"
           />
-          <div className="flex flex-col justify-center items-center backdrop-blur-[15px] backdrop-filter bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-[10px] my-2 p-4 space-y-4">
+          <div className="glass flex flex-col justify-center items-center bg-green-900 bg-opacity-10 mx-4 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] rounded-[10px] my-2 p-4 space-y-4">
             <p
               className="text-white text-[17px] mx-4 lg:text-[20px] xl:text-[25px] xl:px-8"
               style={{
@@ -248,7 +226,7 @@ const BaketomoInfoPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col border-t-[0.5px] border-gray p-2 my-4 mx-2 lg:flex-row">
+      <div className="flex flex-col border-t-[0.5px] border-gray p-2 my-4 mx-2 lg:mx-12 xl:flex-row xl:mx-36">
         <div>
           <h1 className="text-4xl font-bold text-[#4a4e69]">
             Future Development Plans{" "}
@@ -293,7 +271,11 @@ const BaketomoInfoPage = () => {
           </div>
         </div>
 
-        <img src={Monster2} alt="Monsters" className="p-2 lg:w-1/2" />
+        <img
+          src={Monster2}
+          alt="Monsters"
+          className="p-2 md:w-10/12 xl:w-1/2"
+        />
       </div>
 
       <Footer />
