@@ -7,9 +7,11 @@ const CaseStudy = ({ img, title, description, label }) => {
       <hr
         className="visible w-full mx-auto my-12 sm:my-6 md:mb-4 md:mt-0 lg:my-0 lg:invisible lg:w-0 lg:h-0 lg:mx-0"
         style={{ borderTop: "1px solid lightgrey" }}
-      ></hr>
+      />
     );
   };
+
+  const truncatedTitle = title.substring(0, 4)
 
   return (
     <div className="lg:m-1">
@@ -23,7 +25,7 @@ const CaseStudy = ({ img, title, description, label }) => {
               {description}
             </p>
             <Link
-              to={title}
+              to={truncatedTitle}
               className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-4"
             >
               <p className="mx-2 font-bold">See case study</p>{" "}
@@ -36,12 +38,12 @@ const CaseStudy = ({ img, title, description, label }) => {
           <h1 className="mb-4 font-bold text-2xl md:mb-0">{title}</h1>
           <div className="flex flex-col justify-center">
             <p>{description}</p>
-            <button className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-1 my-4 sm:p-2 sm:mx-3 sm:my-4 md:mx-12 lg:mx-0 lg:p-0">
+            <Link to={truncatedTitle} className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-1 my-4 sm:p-2 sm:mx-3 sm:my-4 md:mx-12 lg:mx-0 lg:p-0">
               <p className="mx-2 text-sm md:text-md font-bold lg:mx-0">
                 See case study
               </p>{" "}
               <FaArrowRightLong />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
