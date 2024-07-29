@@ -1,6 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo } from "react";
 
 import Carousel from "../Carousel";
 import BackButton from "../BackButton";
@@ -16,20 +16,25 @@ const StarInventoryPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const headingsOne = "project text-2xl font-bold";
-  const headingsTwo = "font-medium";
-  
+  const headingsOne = useMemo(() => "project text-2xl font-bold", []);
+  const headingsTwo = useMemo(() => "font-medium", []);
+
+  const bgStyle = useMemo(
+    () => ({
+      backgroundImage: `url(${StarBG})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }),
+    []
+  );
+
   return (
     <div className="space-y-4">
       <div
-        className={`w-full p-4 flex flex-col space-y-4 items-center justify-center bg-opacity-30`}
+        className="w-full p-4 flex flex-col space-y-4 items-center justify-center bg-opacity-30"
         id="home"
-        style={{
-          backgroundImage: `url(${StarBG})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        style={bgStyle}
       >
         <img src={StarLogo} alt="Star Inventory Logo" className="w-10/12" />
         <p className="bg-opacity-60 p-2 font-medium shadow-sm bg-slate-50 rounded-[10px]">
@@ -40,45 +45,85 @@ const StarInventoryPage = () => {
           information.
         </p>
       </div>
-      <div className="border-t-2 border-gray-300 py-4 m-4 space-y-4">
-        <h1 className={headingsOne}>Target Audience</h1>
-        <p>
-          The target audience for this application was for small print studios
-          that see high inventory, high turnover and a low employee count.
-        </p>
 
-        <h1 className={headingsOne}>Project Goal</h1>
-        <p>
-          Having worked in the print industry for over 10 years there are three
-          things consistent across each studio. Poor inventory management, high
-          employee turnover and steep learning curve. This application was meant
-          to solve that issue by making it user friendly
-        </p>
+      <Section
+        title="Target Audience"
+        headingClass={headingsOne}
+        content="The target audience for this application was for small print studios
+        that see high inventory, high turnover and a low employee count."
+      />
 
-        <h2 className={headingsTwo}>The Solutions</h2>
-        <ol className="list-decimal list-inside">
-          <li>
-            An easy way for employees to update and track inventory; new and
-            old,
-          </li>
-          <li>
-            Preprogrammed calculations for pricing on inventory items to let
-            employees look up pricing easily,
-          </li>
-          <li>
-            User friendly design to allow new employees to quickly and easily
-            access industry information.
-          </li>
-        </ol>
-      </div>
+      <Section
+        title="Project Goal"
+        headingClass={headingsOne}
+        content="Having worked in the print industry for over 10 years there are three
+        things consistent across each studio. Poor inventory management, high
+        employee turnover and steep learning curve. This application was meant
+        to solve that issue by making it user friendly."
+        subheading="The Solutions"
+        subheadingClass={headingsTwo}
+        listItems={[
+          "An easy way for employees to update and track inventory; new and old.",
+          "Preprogrammed calculations for pricing on inventory items to let employees look up pricing easily.",
+          "User friendly design to allow new employees to quickly and easily access industry information.",
+        ]}
+      />
 
-      <div className="border-t-2 border-gray-300 py-4 m-4 space-y-4">
-        <h2 className={headingsOne}>What We Achieved</h2>
-      </div>
+      <Section
+        title="What We Achieved"
+        headingClass={headingsOne}
+        content="Utilizing a RESTful API, we dynamically populate a list of inventory items, each with clickable links directing users to detailed product pages. These pages display the product's price and description. User roles are categorized into managers and floor employees. Managers have the authority to add new employees, introduce new catalog items, and update pricing. Floor employees have access to browse the inventory and view detailed inventory information."
+      />
+
+      <Section
+        title="Goals Moving Forward"
+        headingClass={headingsOne}
+        content="This application was originally designed and developed using Handlebars and MySQL. Looking ahead, a redesign utilizing modern frameworks such as React and GraphQL would significantly enhance its functionality and performance. Additionally, improving the user experience (UX) will streamline onboarding processes for both management and floor employees, making the system more intuitive and user-friendly."
+      />
+
+      <Section
+        title="Deployed Application"
+        headingClass={headingsOne}
+        content="This application was originally designed and developed using Handlebars and MySQL. Looking ahead, a redesign utilizing modern frameworks such as React and GraphQL would significantly enhance its functionality and performance. Additionally, improving the user experience (UX) will streamline onboarding processes for both management and floor employees, making the system more intuitive and user-friendly."
+        buttons={[
+          { text: "Deployed Application", link: "https://star-inventory-logistics-36c6a2954dc4.herokuapp.com/login" },
+          { text: "GitHub Repository", link: "https://github.com/Rafflafressia/Star-Inventory-Logistics" },
+        ]}
+      />
 
       <Footer />
     </div>
   );
 };
+
+const Section = ({ title, headingClass, content, subheading, subheadingClass, listItems, buttons }) => (
+  <div className="border-t-2 border-gray-300 py-4 m-4 space-y-4">
+    <h1 className={headingClass}>{title}</h1>
+    <p>{content}</p>
+    {subheading && <h2 className={subheadingClass}>{subheading}</h2>}
+    {listItems && (
+      <ol className="list-decimal list-inside">
+        {listItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ol>
+    )}
+    {buttons && (
+      <div className="flex space-x-4">
+        {buttons.map((button, index) => (
+          <a
+            key={index}
+            href={button.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-2 rounded-lg text-sm"
+          >
+            {button.text}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+);
 
 export default StarInventoryPage;
