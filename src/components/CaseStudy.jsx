@@ -14,7 +14,7 @@ const CaseStudy = ({ img, title, description, label }) => {
   const truncatedTitle = title.substring(0, 4)
 
   return (
-    <div className="lg:m-1">
+    <div className="lg:m-1 border-t-2 border-gray xl:border-t-0 py-4">
       <div className="case-study lg:relative lg:overflow-hidden flex mb-40 sm:mb-12 md:mb-0 space-x-2 justify-center items-start rounded-[15px]">
         {img}
         <div className="description invisible fixed lg:w-[450px] lg:h-[225px] lg:absolute lg:visible lg:flex lg:flex-col lg:items-start lg:px-4 lg:justify-center lg:bottom-0 rounded-[10px]">
@@ -47,8 +47,6 @@ const CaseStudy = ({ img, title, description, label }) => {
           </div>
         </div>
       </div>
-
-      <Divider />
     </div>
   );
 };

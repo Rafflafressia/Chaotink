@@ -19,35 +19,28 @@ const Home = () => {
 
   const caseStudies = [
     {
-      img: { Baketomo },
+      img: Baketomo,
       label: "FULL STACK WEB DEVELOPMENT",
       title: "Baketomo",
       description:
         "Baketomo is a web browser game that takes insipiration from Pokemon and Neopets. Players can collect monsters, explore dungeons to expand their collection and buy items.",
     },
     {
-      img: { StarInventory },
+      img: StarInventory,
       label: "FULL STACK WEB DEVELOPMENT",
       title: "Star Inventory Logistics",
       description:
         "A CMS application for inventory management for small businesses. Organize your products, track sales and manage your inventory.",
     },
     {
-      img: { SoldBig },
-      label: "GRAPHIC DESIGN",
-      title: "SoldBig Realty",
-      description:
-        "Designed and printed 10, 000 brochures for SoldBig Realty to help promote their real estate brand. SoldBig Realty is a real estate firm that operates in the GTA.",
-    },
-    {
-      img: { PremiumCustom },
+      img: PremiumCustom,
       label: "GRAPHIC DESIGN",
       title: "Premier Custom Surfacing",
       description:
         "Designed, printed and wrapped 8 trucks and 1 trailer. Premium Custom Surfacing or Playsafe Canada specializes in rubberized pour-in surfaces.",
     },
     {
-      img: { Answerables },
+      img: Answerables,
       label: "GAME DEVELOPMENT",
       title: "Answerables",
       description:
@@ -58,7 +51,7 @@ const Home = () => {
   return (
     <div className="home__container flex-wrap flex-row text-center justify-center items-center">
       <section className="flex flex-col pt-24 mx-1 items-center justify-center space-x-12 lg:flex-row xl:mx-96">
-        <div className="">
+        <div>
           <h1 className="font-bold text-[50px] text-black md:leading-[75px] md:text-[75px] md:text-center">
             Arkaw <span className="text-[#3a7ca5]">Banerjee</span>
           </h1>
@@ -110,7 +103,7 @@ const Home = () => {
       ></hr>
 
       <section className="mx-2 md:mx-24 xl:mx-36 2xl:mx-96">
-        <h1 className="invisible w-0 h-0 px-24 sm:text-center sm:mx-auto sm:px-0 md:text-[#16425b] md:h-full md:w-full md:my-8 md:visible 2xl:text-[60px] md:text-5xl md:font-bold">
+        <h1 className="text-4xl my-4 px-12 sm:text-center sm:mx-auto sm:px-0 text-[#16425b] md:h-full md:w-full md:my-8 md:visible 2xl:text-[60px] md:text-5xl font-bold">
           Case Studies
         </h1>
         <div className="case-studies overflow-hidden flex flex-col flex-wrap md:flex-row justify-center">
@@ -118,20 +111,16 @@ const Home = () => {
             <CaseStudy
               key={index}
               img={
-                study.img && (
-                  <img
-                    src={Object.values(study.img)}
-                    alt={study.title}
-                    className="w-[200px] h-[200px] lg:w-[500px] lg:h-[350px] rounded-[10px] shadow-md md:shadow-lg"
-                  />
-                )
+                <img
+                  src={study.img}
+                  alt={study.title}
+                  className="w-[200px] h-[200px] lg:w-[500px] lg:h-[350px] rounded-[10px] shadow-md md:shadow-lg"
+                />
               }
               label={
-                study.label && (
-                  <label className="relative top-4 text-[12px] tracking-wider">
-                    {study.label}
-                  </label>
-                )
+                <label className="relative top-4 text-[12px] tracking-wider">
+                  {study.label}
+                </label>
               }
               title={study.title}
               description={study.description}
@@ -144,7 +133,6 @@ const Home = () => {
         className="visible mt-12 md:mx-auto md:mt-12 md:w-full"
         style={{ borderTop: "1px solid lightgrey" }}
       ></hr>
-      <Footer />
     </div>
   );
 };
