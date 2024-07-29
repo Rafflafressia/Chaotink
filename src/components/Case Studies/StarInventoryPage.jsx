@@ -4,12 +4,16 @@ import { useEffect, useMemo } from "react";
 
 import Carousel from "../Carousel";
 import BackButton from "../BackButton";
-import BaketomoNav from "../PresentationNav";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
 
 import StarBG from "../../assets/sil-bg.png";
 import StarLogo from "../../assets/star-inventory-logo.svg";
+import imgOne from "../../assets/star-add-employee.png";
+import imgTwo from "../../assets/star-admin.png";
+import imgThree from "../../assets/star-home.png";
+import imgFour from "../../assets/star-new-product.png";
+import imgFive from "../../assets/star-product-hover.png";
+import imgSix from "../../assets/star-product-page.png";
+import imgSeven from "../../assets/star-category-hover.png";
 
 const StarInventoryPage = () => {
   useEffect(() => {
@@ -29,14 +33,16 @@ const StarInventoryPage = () => {
     []
   );
 
+ const images = [imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix, imgSeven];
+
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 lg:mx-32 xl:mx-48 2xl:mx-[500px]">
       <div
         className="w-full p-4 flex flex-col space-y-4 items-center justify-center bg-opacity-30"
         id="home"
         style={bgStyle}
       >
-        <img src={StarLogo} alt="Star Inventory Logo" className="w-10/12" />
+        <img src={StarLogo} alt="Star Inventory Logo" className="w-10/12 xl:w-2/3" />
         <p className="bg-opacity-60 p-2 font-medium shadow-sm bg-slate-50 rounded-[10px]">
           Star Inventory Systems is an inventory management system for small
           businesses. This application uses RESTful API operations. Users are
@@ -76,6 +82,13 @@ const StarInventoryPage = () => {
       />
 
       <Section
+      title="Application Overview"
+      headingClass={headingsOne}
+      />
+
+      <Carousel images={images}/>
+
+      <Section
         title="Goals Moving Forward"
         headingClass={headingsOne}
         content="This application was originally designed and developed using Handlebars and MySQL. Looking ahead, a redesign utilizing modern frameworks such as React and GraphQL would significantly enhance its functionality and performance. Additionally, improving the user experience (UX) will streamline onboarding processes for both management and floor employees, making the system more intuitive and user-friendly."
@@ -84,45 +97,51 @@ const StarInventoryPage = () => {
       <Section
         title="Deployed Application"
         headingClass={headingsOne}
-        content="This application was originally designed and developed using Handlebars and MySQL. Looking ahead, a redesign utilizing modern frameworks such as React and GraphQL would significantly enhance its functionality and performance. Additionally, improving the user experience (UX) will streamline onboarding processes for both management and floor employees, making the system more intuitive and user-friendly."
         buttons={[
           { text: "Deployed Application", link: "https://star-inventory-logistics-36c6a2954dc4.herokuapp.com/login" },
           { text: "GitHub Repository", link: "https://github.com/Rafflafressia/Star-Inventory-Logistics" },
         ]}
       />
-
-      <Footer />
     </div>
   );
 };
 
-const Section = ({ title, headingClass, content, subheading, subheadingClass, listItems, buttons }) => (
+const Section = ({ title, headingClass, content, subheading, subheadingClass, listItems, buttons, image }) => (
   <div className="border-t-2 border-gray-300 py-4 m-4 space-y-4">
     <h1 className={headingClass}>{title}</h1>
-    <p>{content}</p>
-    {subheading && <h2 className={subheadingClass}>{subheading}</h2>}
-    {listItems && (
-      <ol className="list-decimal list-inside">
-        {listItems.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ol>
-    )}
-    {buttons && (
-      <div className="flex space-x-4">
-        {buttons.map((button, index) => (
-          <a
-            key={index}
-            href={button.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-2 rounded-lg text-sm"
-          >
-            {button.text}
-          </a>
-        ))}
+    <div className={`flex flex-col items-center space-y-6 md:flex-row ${image ? 'lg:space-x-4' : ' '}`}>
+      <div className="space-y-4">
+        <p>{content}</p>
+        {subheading && <h2 className={subheadingClass}>{subheading}</h2>}
+        {listItems && (
+          <ol className="list-decimal list-inside">
+            {listItems.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ol>
+        )}
+        {buttons && (
+          <div className="flex space-x-4 my-4">
+            {buttons.map((button, index) => (
+              <a
+                key={index}
+                href={button.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-2 rounded-lg text-sm"
+              >
+                {button.text}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
-    )}
+      {image && (
+        <div className="flex-shrink-0">
+          <img src={image} alt="Section visual representation" className="max-w-xs rounded-lg" />
+        </div>
+      )}
+    </div>
   </div>
 );
 
