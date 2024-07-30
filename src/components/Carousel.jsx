@@ -2,7 +2,7 @@ import Slider from "react-slick";
 
 const Carousel = ({images}) => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
@@ -10,11 +10,12 @@ const Carousel = ({images}) => {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    arrows: false,
   };
 
   return (
     <div className="carousel-container">
-      <Slider {...settings} arrows={false} dots={false}>
+      <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>
             <img
