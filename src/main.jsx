@@ -14,6 +14,7 @@ import Contact from "./components/Contact/Contact.jsx";
 // Case Studies
 import Baketomo from "./components/Case Studies/BaketomoInfoPage.jsx"
 import StarInventory from "./components/Case Studies/StarInventoryPage.jsx";
+import PremierCustom from "./components/Case Studies/PremierCustomPage.jsx";
 
 
 // Page routes
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path: "Star",
         element: <StarInventory />,
       },
+      {
+        path:"Prem",
+        element:<PremierCustom />
+      }
     ],
   },
 ]);

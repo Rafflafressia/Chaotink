@@ -2,14 +2,6 @@ import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const CaseStudy = ({ img, title, description, label }) => {
-  const Divider = () => {
-    return (
-      <hr
-        className="visible w-full mx-auto my-12 sm:my-6 md:mb-4 md:mt-0 lg:my-0 lg:invisible lg:w-0 lg:h-0 lg:mx-0"
-        style={{ borderTop: "1px solid lightgrey" }}
-      />
-    );
-  };
 
   const truncatedTitle = title.substring(0, 4)
 
