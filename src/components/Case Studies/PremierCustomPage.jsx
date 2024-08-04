@@ -97,7 +97,16 @@ const StarInventoryPage = () => {
 
       <Section title="Finished Product" headingClass={headingsOne} />
 
-      <Carousel images={truckImgs} />
+      <div className="flex flex-wrap">
+        {truckImgs.map((img) => (
+          <img
+            src={img}
+            alt="Section visual representation"
+            className="max-w-md rounded-lg m-2"
+          />
+        ))}
+        ;
+      </div>
     </div>
   );
 };

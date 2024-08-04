@@ -8,14 +8,14 @@ const PortfolioSubNavigation = ({ categories }) => {
 
   return (
     <aside className="portfolio-sub-navigation text-center">
-      <h1 className="text-[#36DCA0] text-4xl font-bold mb-4 lg:text-[90px]">
+      <h1 className="text-[#16425b] text-4xl font-bold mb-4 lg:text-[90px]">
         Portfolio
       </h1>
       <ul className="list-none flex flex-col md:flex-row justify-center space-x-2 mx-auto md:mx-auto md:my-[50px] w-[200px] md:text-right md:px-2 items-center">
         {categories.map(([category, path], index) => (
           <li key={index}>
             <Link to={path}>
-              <button className="my-2 relative bg-auto overflow-hidden [background:#4D4D4D] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#2A7358] w-[300px] h-[200px] lg:w-[400px] lg:h-[600px] rounded-2xl">
+              <button className="my-2 relative bg-auto overflow-hidden [background:#4D4D4D] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#16425b] w-[300px] h-[200px] lg:w-[400px] lg:h-[600px] rounded-2xl">
                 <div
                   style={{
                     backgroundImage: `url(${bgImages[index]})`,
