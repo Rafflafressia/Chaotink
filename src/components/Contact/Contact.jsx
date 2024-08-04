@@ -190,17 +190,17 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col items-center my-14 space-x-2 space-y-8">
-      <h1 className="text-white text-4xl font-bold">Contact</h1>
+      <h1 className="text-[#16425b] text-4xl font-bold">Contact</h1>
       {categories.map((category, index) => (
         <div key={index} className="mx-auto px-4">
-          <h2 className="m-auto text-[#36DCA0] my-4 text-2xl font-bold text-wrap text-center">
+          <h2 className="m-auto text-[#16425b] my-4 text-2xl font-bold text-wrap text-center">
             {category.name}
           </h2>
           <div className="flex flex-row flex-wrap space-x-2">
             {category.proficiencies.map((proficiency, index) => {
               const Icon = proficiency.icon;
               return (
-                <Icon key={index} size={36} color="white" className="m-1" />
+                <Icon key={index} size={36} color="#3a7ca5" className="m-1" />
               );
             })}
           </div>
@@ -208,23 +208,23 @@ const Contact = () => {
       ))}
 
       <div className="flex flex-col justify-center items-center mx-auto space-y-4">
-        <p className="text-white text-lg text-center">
+        <p className="text-[#16425b] text-lg text-center">
           If you're looking to get in touch please feel free to reach out to me
           on:
         </p>
         <div className="flex flex-row space-x-4">
-          <SiFacebook size={36} color="#36DCA0" onClick={goToFB} />
-          <SiLinkedin size={36} color="#36DCA0" onClick={goToLinkedIn} />
-          <SiInstagram size={36} color="#36DCA0" onClick={goToInsta} />
+          <SiFacebook size={36} color="#3a7ca5" onClick={goToFB} />
+          <SiLinkedin size={36} color="#3a7ca5" onClick={goToLinkedIn} />
+          <SiInstagram size={36} color="#3a7ca5" onClick={goToInsta} />
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mx-auto space-y-4">
-        <p className="text-white text-lg text-center">
+        <p className="text-[#16425b] text-lg text-center">
           Before you go! You can grab my resume or checkout my github page!
         </p>
         <div className="flex flex-row space-x-4">
-          <MdCloudDownload size={36} color="#36DCA0" onClick={downloadResume} />
-          <SiGithub size={36} color="#36DCA0" onClick={goToGitHub} />
+          <MdCloudDownload size={36} color="#3a7ca5" onClick={downloadResume} />
+          <SiGithub size={36} color="#3a7ca5" onClick={goToGitHub} />
         </div>
       </div>
     </div>

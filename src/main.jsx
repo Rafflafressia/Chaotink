@@ -12,10 +12,12 @@ import Portfolio from "./components/Portfolio/Portfolio.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 
 // Case Studies
-import Baketomo from "./components/Case Studies/BaketomoInfoPage.jsx"
+import Baketomo from "./components/Case Studies/BaketomoInfoPage.jsx";
 import StarInventory from "./components/Case Studies/StarInventoryPage.jsx";
 import PremierCustom from "./components/Case Studies/PremierCustomPage.jsx";
 
+//Portfolio
+import Illustrations from "./components/Portfolio/Illustrations.jsx";
 
 // Page routes
 const router = createBrowserRouter([
@@ -49,9 +51,13 @@ const router = createBrowserRouter([
         element: <StarInventory />,
       },
       {
-        path:"Prem",
-        element:<PremierCustom />
-      }
+        path: "Prem",
+        element: <PremierCustom />,
+      },
+      {
+        path: "Illustrations",
+        element: <Illustrations />,
+      },
     ],
   },
 ]);

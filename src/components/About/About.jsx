@@ -1,36 +1,44 @@
 import ME from "../../assets/ME.png";
 import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const About = () => {
   return (
     <div className="about-box flex flex-col items-center my-12 md:flex-row">
-      <div className="md:w-full md:h-full md:mx-12 md:flex md:flex-col items-center">
-        <h1 className="text-4xl font-bold text-white">
-          This is <span className="text-[#36DCA0]">ME</span>
+      <div className="flex flex-col justify-center items-center m-8">
+        <h1 className="text-4xl font-bold text-black m-4">
+          This is <span className="text-[#16425b]">ME</span>
         </h1>
-        <img
-          src={ME}
-          alt="My Picture"
-          className=" w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[500px] lg:h-[500px] mt-3"
-        />
+        <img src={ME} alt="My Picture" className="m-4" />
       </div>
       <div>
-        <p className="mt-12 text-xl text-white mx-10 text-left lg:text-2xl">
-          I am a budding UI/UX designer. My passion is in illustrations, graphic
-          designs and web application designs.
+        <p className="m-8 font-bold text-lg">
+          I've been working as a graphic designer for the last 10 years. I've
+          had a pretty long winded journey to get to where I am today. I started
+          off as a 3D Artist in the games industry, and moved into graphic
+          design, and then into web development. I've worked on a variety of
+          projects, from creating websites, to designing logos and
+          illustrations.
         </p>
-        <p className="mt-12 text-xl text-white mx-10 text-left lg:text-2xl">
+        <p className="m-8 font-bold text-lg">
           Currently, I'm working on a pet project called Baketomo. A creature
           collection game where you can collect, trade and battle creatures. You
           can check out the project by clicking the button below. All
-          illustrations and UI designs are all done by me. Blach
+          illustrations and UI designs are all done by me.
         </p>
         <Link
-          to="/BaketomoInfoPage"
-          className="[background:#36DCA0] rounded-[12.948px] border-[3.7px] border-solid border-[#22B27F] text-[#106F4C] h-[40px] w-[100px] mx-auto my-8 text-center justify-center items-center flex"
+          to="/Bake"
+          className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-8 mx-8 md:mx-16 lg:mx-24"
         >
-          Baketomo
+          <p className="mx-2 font-bold">See case study</p> <FaArrowRightLong />
         </Link>
+
+        <p className="m-8 font-bold text-lg">
+          When I'm not being an important work asset I'm being a nerd. I've
+          grown up with video games and trading cards. I've recently gotten into
+          retro handheld gaming harkening to the good old days of the Gameboy. I
+          also have a lot of money invested into Magic the Gathering.
+        </p>
       </div>
     </div>
   );
