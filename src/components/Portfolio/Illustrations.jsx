@@ -6,6 +6,28 @@ import PortfolioImg5 from "../../assets/illust-5.jpg";
 import PortfolioImg6 from "../../assets/illust-6.jpg";
 import PortfolioImg7 from "../../assets/illust-7.jpg";
 import PortfolioImg8 from "../../assets/illust-8.jpg";
+import PortfolioImg9 from "../../assets/bunny.jpg";
+import PortfolioImg10 from "../../assets/cherry.jpg";
+import PortfolioImg11 from "../../assets/ffxiv.jpg";
+import PortfolioImg12 from "../../assets/froppy.jpg";
+import PortfolioImg13 from "../../assets/girl.png";
+import PortfolioImg14 from "../../assets/egypt.png";
+import PortfolioImg15 from "../../assets/gundam.png";
+import PortfolioImg16 from "../../assets/miku.jpg";
+import PortfolioImg17 from "../../assets/penguin.jpg";
+import PortfolioImg18 from "../../assets/daisy.png";
+import PortfolioImg19 from "../../assets/demongirl.jpg";
+import PortfolioImg20 from "../../assets/elf.jpg";
+import PortfolioImg21 from "../../assets/fairy.jpg";
+import PortfolioImg22 from "../../assets/mononoke.jpg";
+import PortfolioImg23 from "../../assets/mouse.jpg";
+import PortfolioImg24 from "../../assets/orc-sketch.jpg";
+import PortfolioImg25 from "../../assets/pic02.png";
+import PortfolioImg26 from "../../assets/pic03.png";
+import PortfolioImg27 from "../../assets/pic05.png";
+import PortfolioImg28 from "../../assets/RadioDemon.jpg";
+import PortfolioImg29 from "../../assets/Trash Panda.jpg";
+import PortfolioImg30 from "../../assets/wolf-girl.jpg";
 
 const illustrations = [
   {
@@ -32,34 +54,100 @@ const illustrations = [
   {
     imageUrl: PortfolioImg8,
   },
+  {
+    imageUrl: PortfolioImg9,
+  },
+  {
+    imageUrl: PortfolioImg10,
+  },
+  {
+    imageUrl: PortfolioImg11,
+  },
+  {
+    imageUrl: PortfolioImg12,
+  },
+  {
+    imageUrl: PortfolioImg13,
+  },
+  {
+    imageUrl: PortfolioImg14,
+  },
+  {
+    imageUrl: PortfolioImg15,
+  },
+  {
+    imageUrl: PortfolioImg16,
+  },
+  {
+    imageUrl: PortfolioImg17,
+  },
+  {
+    imageUrl: PortfolioImg18,
+  },
+  {
+    imageUrl: PortfolioImg19,
+  },
+  {
+    imageUrl: PortfolioImg20,
+  },
+  {
+    imageUrl: PortfolioImg21,
+  },
+  {
+    imageUrl: PortfolioImg22,
+  },
+  {
+    imageUrl: PortfolioImg23,
+  },
+  {
+    imageUrl: PortfolioImg24,
+  },
+  {
+    imageUrl: PortfolioImg25,
+  },
+  {
+    imageUrl: PortfolioImg26,
+  },
+  {
+    imageUrl: PortfolioImg27,
+  },
+  {
+    imageUrl: PortfolioImg28,
+  },
+  {
+    imageUrl: PortfolioImg29,
+  },
+  {
+    imageUrl: PortfolioImg30,
+  },
 ];
 
 const IllustrationsCards = () => {
   return (
-    <section className="mx-auto my-2 p-4 contain-content w-[400px] [background:#404040] lg:w-[1240px] lg:h-full border-b border-slate-600 rounded-2xl">
-      <div className="illustrations-cards h-full justify-center items-center">
-        <div className="flex flex-row justify-center px-4 mb-4">
-          <h1 className="text-white text-right text-2xl font-bold mt-6">
+    <section className="m-8 [background:#D9DCD6] p-4 rounded-lg shadow-lg lg:mx-32 xl:mx-72">
+      <div className="illustrations-cards justify-center items-center">
+        <div className="flex flex-col justify-center items-start space-y-4">
+          <h1 className="text-[#16425b] text-5xl font-bold">
             Personal
-            <span className="text-[#36DCA0]"> Drawings</span>
+            <span className="text-[#2F6690]"> Drawings</span>
           </h1>
-          <span className="border-r-2 mx-4 pl-2"></span>
-          <p className="text-white">
-            Above all else, I love to draw. Here are some of my personal
-            favourites. If you're an artist worth your salt, you'll have more
-            WIPs than finished pieces.
+          <p className="text-[#2F6690] border-t-2 border-[#B9BAB7] border-b-2 p-8 md:text-lg">
+            A collection of personal sketches and drawings that I've done over
+            the years. I love to draw and sketch in my free time. I learned
+            originally to draw digitally, so that I could work in the games
+            industry. I've since changed my focus to draw on traditional
+            mediums, like paper and canvas and as a way to relax and unwind.
+            Interlaced with my illustrations are 3D projects that I've also
+            worked on.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row md:h-screen">
+        <div className="flex flex-wrap justify-center items-center m-8">
           {illustrations.map((illustration, index) => (
-            <div
-              key={index}
-              className="illustrations-card my-4 mx-4 space-x-2 md:w-full md:h-full"
-            >
+            <div key={index} className="p-4 lg:w-3/12 md:w-5/12 w-full">
               <img
                 src={illustration.imageUrl}
                 alt={`Illustration ${index}`}
-                className="[background:#4D4D4D] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#2A7358] rounded-2xl"
+                className="w-full h-auto object-cover shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#2f6690] rounded-2xl"
               />
             </div>
           ))}
