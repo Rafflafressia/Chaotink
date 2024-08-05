@@ -1,11 +1,10 @@
-import Brochures from "../assets/brochures.png";
-import BusinessCards from "../assets/business-cards.png";
-import GreetingCards from "../assets/greeting-cards.png";
-import Logos from "../assets/logos.png";
-import VehicleWraps from "../assets/vehicle-wraps.png";
-import WindowGraphics from "../assets/window-graphics.png";
-import ProductPackaging from "../assets/product-packaging.png";
-import BackButton from "../components/BackButton";
+import Brochures from "../../assets/brochures.png";
+import BusinessCards from "../../assets/business-cards.png";
+import GreetingCards from "../../assets/greeting-cards.png";
+import Logos from "../../assets/logos.png";
+import VehicleWraps from "../../assets/vehicle-wraps.png";
+import WindowGraphics from "../../assets/window-graphics.png";
+import ProductPackaging from "../../assets/product-packaging.png";
 
 const graphicDesignProjects = [
   {
@@ -90,7 +89,6 @@ const GraphicDesignCards = () => {
           </div>
         ))}
       </div>
-      <BackButton />
     </section>
   );
 };

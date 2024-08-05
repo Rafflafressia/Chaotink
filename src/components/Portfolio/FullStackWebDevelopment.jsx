@@ -1,12 +1,11 @@
-import Bamboo from "../assets/bamboo-homepage.png";
-import JATE from "../assets/JATE-application.png";
-import MERN from "../assets/MERN-application.png";
-import PWGen from "../assets/password-generator.png";
-import StarInv from "../assets/star-inventory-logistics.png";
-import WeatherAPI from "../assets/weather-api.png";
-import GithubIcon from "../assets/github-icon.svg";
-import DeploymentIcon from "../assets/deployed-icon.svg";
-import BackButton from "../components/BackButton";
+import Bamboo from "../../assets/bamboo-homepage.png";
+import JATE from "../../assets/JATE-application.png";
+import MERN from "../../assets/MERN-application.png";
+import PWGen from "../../assets/password-generator.png";
+import StarInv from "../../assets/star-inventory-logistics.png";
+import WeatherAPI from "../../assets/weather-api.png";
+import GithubIcon from "../../assets/github-icon.svg";
+import DeploymentIcon from "../../assets/deployed-icon.svg";
 
 const icon = {
   github: GithubIcon,
@@ -69,7 +68,6 @@ const fullStackProjects = [
 const FullStackDevelopmentCards = () => {
   return (
     <section className="mx-auto my-2 flex flex-col p-4 contain-content w-[400px] [background:#404040] lg:w-[1240px] lg:h-full border-b border-slate-600 rounded-2xl">
-      <BackButton />
       <div className="flex flex-row justify-center px-4 mb-4">
         <h1 className="text-white text-right text-2xl font-bold mt-6">
           Full
