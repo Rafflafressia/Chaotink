@@ -6,7 +6,6 @@ import PortfolioImg5 from "../../assets/illust-5.jpg";
 import PortfolioImg6 from "../../assets/illust-6.jpg";
 import PortfolioImg7 from "../../assets/illust-7.jpg";
 import PortfolioImg8 from "../../assets/illust-8.jpg";
-import BackButton from "../BackButton";
 
 const illustrations = [
   {
@@ -66,7 +65,6 @@ const IllustrationsCards = () => {
           ))}
         </div>
       </div>
-      <BackButton />
     </section>
   );
 };

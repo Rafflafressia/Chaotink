@@ -18,6 +18,8 @@ import PremierCustom from "./components/Case Studies/PremierCustomPage.jsx";
 
 //Portfolio
 import Illustrations from "./components/Portfolio/Illustrations.jsx";
+import GraphicDesign from "./components/Portfolio/GraphicDesign.jsx";
+import WebDev from "./components/Portfolio/FullStackWebDevelopment.jsx";
 
 // Page routes
 const router = createBrowserRouter([
@@ -57,6 +59,14 @@ const router = createBrowserRouter([
       {
         path: "Illustrations",
         element: <Illustrations />,
+      },
+      {
+        path: "/graphic-design",
+        element: <GraphicDesign />,
+      },
+      {
+        path: "/web-dev",
+        element: <WebDev />,
       },
     ],
   },
