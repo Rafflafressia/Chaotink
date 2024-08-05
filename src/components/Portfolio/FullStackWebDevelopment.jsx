@@ -67,16 +67,19 @@ const fullStackProjects = [
 
 const FullStackDevelopmentCards = () => {
   return (
-    <section className="mx-auto my-2 flex flex-col p-4 contain-content w-[400px] [background:#404040] lg:w-[1240px] lg:h-full border-b border-slate-600 rounded-2xl">
-      <div className="flex flex-row justify-center px-4 mb-4">
-        <h1 className="text-white text-right text-2xl font-bold mt-6">
-          Full
-          <span className="text-[#36DCA0]"> Stack</span>
+    <section className="m-8 [background:#D9DCD6] p-4 rounded-lg shadow-lg lg:mx-32 xl:mx-72">
+      <div className="flex flex-col justify-center items-start space-y-4">
+        <h1 className="text-[#16425b] text-4xl md:text-5xl font-bold">
+          Full Stack
+          <span className="text-[#2F6690]"> Web Development</span>
         </h1>
-        <span className="border-r-2 mx-4 pl-2"></span>
-        <p className="text-white">
-          A Collection of applications designed and deployed on GitHub through
-          the UofT Full stack development bootcamp
+        <p className="text-[#2F6690] border-t-2 border-[#B9BAB7] border-b-2 p-8 md:text-lg">
+          The following is a collection of applications I've built while
+          attending University of Toronto. The applications demonstrate not only
+          a progressional growth as a full stack developer but also the ability
+          to learn and adapt to new technologies. Please feel free to click on
+          either the github or deployment links to view the code or the
+          application itself.
         </p>
       </div>
 
@@ -85,20 +88,22 @@ const FullStackDevelopmentCards = () => {
       {fullStackProjects.map((project, index) => (
         <div
           key={index}
-          className="full-stack-development-card flex my-4 space-x-2 [background:#4D4D4D] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#2A7358] rounded-2xl"
+          className="full-stack-development-card flex my-4 space-x-2 [background:#b9bab7] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#16425b] rounded-2xl"
         >
-          <div className="projImg flex ">
+          <div className="projImg flex fixed md:relative p-4 lg:w-[450px] md:w-11/12 w-full">
             <img
               src={project && project.imageUrl}
               alt={project && project.title}
-              className="invisible w-0 md:visible md:w-[350px] p-4"
+              className="invisible w-0 md:visible md:w-full md:h-auto md:object-cover p-4"
             />
           </div>
           <div className="projDesc flex flex-col">
-            <h3 className="text-white text-2xl font-bold my-4 ml-2">
+            <h3 className="text-[#16425b] text-2xl font-bold my-4 ml-2">
               {project && project.title}
             </h3>
-            <p className="text-white mx-2">{project && project.description}</p>
+            <p className="text-[#16425b] font-bold text-xl mx-2">
+              {project && project.description}
+            </p>
             <div className="flex flex-row justify-start items-center">
               <button>
                 <a href={project.githubURL}>
