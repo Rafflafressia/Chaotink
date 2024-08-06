@@ -67,7 +67,7 @@ const fullStackProjects = [
 
 const FullStackDevelopmentCards = () => {
   return (
-    <section className="m-8 [background:#D9DCD6] p-4 rounded-lg shadow-lg lg:mx-32 xl:mx-72">
+    <section className="px-8 py-24 lg:mx-32 xl:mx-72">
       <div className="flex flex-col justify-center items-start space-y-4">
         <h1 className="text-[#16425b] text-4xl md:text-5xl font-bold">
           Full Stack
@@ -88,7 +88,7 @@ const FullStackDevelopmentCards = () => {
       {fullStackProjects.map((project, index) => (
         <div
           key={index}
-          className="full-stack-development-card flex my-4 space-x-2 [background:#b9bab7] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#16425b] rounded-2xl"
+          className="full-stack-development-card flex my-4 space-x-2 bg-gray-300 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#16425b] rounded-2xl"
         >
           <div className="projImg flex fixed md:relative p-4 lg:w-[450px] md:w-11/12 w-full">
             <img

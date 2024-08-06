@@ -1,7 +1,7 @@
 import PortfolioSubNavigation from "./PortfolioSubNavigation";
 const Portfolio = () => {
   return (
-    <div className="portfolio-container my-12 md:my-[20px] lg:my-[100px]">
+    <div className="portfolio-container">
       <div>
         <PortfolioSubNavigation
           categories={[

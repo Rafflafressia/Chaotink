@@ -7,11 +7,11 @@ const PortfolioSubNavigation = ({ categories }) => {
   const bgImages = [bgFS, bgGD, bgIL];
 
   return (
-    <aside className="portfolio-sub-navigation text-center">
-      <h1 className="text-[#16425b] text-4xl font-bold mb-4 lg:text-[90px]">
+    <div className="portfolio-sub-navigation py-16 text-center">
+      <h1 className="text-[#16425b] text-[50px] font-bold lg:text-[100px]">
         Portfolio
       </h1>
-      <ul className="list-none flex flex-col md:flex-row justify-center space-x-2 mx-auto md:mx-auto md:my-[50px] w-[200px] md:text-right md:px-2 items-center">
+      <ul className="list-none flex flex-col md:flex-row justify-center space-x-2 mx-auto w-[200px] md:text-right md:px-2 items-center">
         {categories.map(([category, path], index) => (
           <li key={index}>
             <Link to={path}>
@@ -33,7 +33,7 @@ const PortfolioSubNavigation = ({ categories }) => {
           </li>
         ))}
       </ul>
-    </aside>
+    </div>
   );
 };
 

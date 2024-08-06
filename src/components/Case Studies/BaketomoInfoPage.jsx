@@ -51,7 +51,7 @@ const BaketomoInfoPage = () => {
   const images = [F5Minute_1, F5Minute_2, F5Minute_3];
 
   return (
-    <div>
+    <div className="py-8">
       <div className="w-full py-12" id="home" style={backgroundStyle}>
         <div className="glass flex flex-col justify-center items-center shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] bg-green-900 mx-4 md:mx-12 lg:mx-36 rounded-[10px] my-2 p-4 space-y-4">
           <img src={BaketomoLogo} alt="Baketomo Logo" className="w-10/12 sm:w-2/3" />
@@ -154,7 +154,6 @@ const BaketomoInfoPage = () => {
         </div>
         <img src={Monster2} alt="Monsters" className="p-2 md:w-10/12 xl:w-1/2" />
       </div>
-      <Footer />
     </div>
   );
 };

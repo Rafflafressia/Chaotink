@@ -41,7 +41,7 @@ const StarInventoryPage = () => {
   ];
 
   return (
-    <div className="space-y-4 lg:mx-32 xl:mx-48 2xl:mx-[500px]">
+    <div className="space-y-4 py-16 lg:mx-32 xl:mx-48 2xl:mx-[500px]">
       <div
         className="w-full p-4 flex flex-col space-y-4 items-center justify-center bg-opacity-30"
         id="home"
@@ -97,15 +97,14 @@ const StarInventoryPage = () => {
 
       <Section title="Finished Product" headingClass={headingsOne} />
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap mx-auto justify-center">
         {truckImgs.map((img) => (
           <img
             src={img}
             alt="Section visual representation"
-            className="max-w-md rounded-lg m-2"
+            className="max-w-sm rounded-lg m-2"
           />
         ))}
-        ;
       </div>
     </div>
   );

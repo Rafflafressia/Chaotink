@@ -36,7 +36,7 @@ const StarInventoryPage = () => {
  const images = [imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix, imgSeven];
 
   return (
-    <div className="space-y-4 lg:mx-32 xl:mx-48 2xl:mx-[500px]">
+    <div className="space-y-4 py-8 lg:mx-32 xl:mx-48 2xl:mx-[500px]">
       <div
         className="w-full p-4 flex flex-col space-y-4 items-center justify-center bg-opacity-30"
         id="home"

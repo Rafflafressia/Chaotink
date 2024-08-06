@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="flex mx-4 items-center justify-between p-2">
+    <footer className="flex mx-4 items-center justify-between p-4 border-t-2 border-grey">
       <div>
         <p className="text-[#16425b] text-xl md:text-sm font-semibold">
           © 2024 Arkaw Banerjee

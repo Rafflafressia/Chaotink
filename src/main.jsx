@@ -15,6 +15,7 @@ import Contact from "./components/Contact/Contact.jsx";
 import Baketomo from "./components/Case Studies/BaketomoInfoPage.jsx";
 import StarInventory from "./components/Case Studies/StarInventoryPage.jsx";
 import PremierCustom from "./components/Case Studies/PremierCustomPage.jsx";
+import Answerables from "./components/Case Studies/AnswerablesPage.jsx";
 
 //Portfolio
 import Illustrations from "./components/Portfolio/Illustrations.jsx";
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "Illustrations",
         element: <Illustrations />,
+      },
+      {
+        path: "Answ",
+        element: <Answerables />,
       },
       {
         path: "/graphic-design",
