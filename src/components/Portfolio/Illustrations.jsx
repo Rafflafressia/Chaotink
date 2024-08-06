@@ -124,7 +124,7 @@ const illustrations = [
 
 const IllustrationsCards = () => {
   return (
-    <section className="m-8 [background:#D9DCD6] p-4 rounded-lg shadow-lg lg:mx-32 xl:mx-72">
+    <section className="px-8 py-24 lg:mx-32 xl:mx-72">
       <div className="illustrations-cards justify-center items-center">
         <div className="flex flex-col justify-center items-start space-y-4">
           <h1 className="text-[#16425b] text-5xl font-bold">

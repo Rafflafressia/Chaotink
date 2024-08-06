@@ -46,7 +46,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="h-[35px] flex justify-center items-center px-4 [background:#16425b] mx-auto w-full md:h-[60px] drop-shadow-md">
+    <div className="fixed w-full z-50">
+      <div className="h-[35px] flex justify-center items-center px-4 [background:#16425b] mx-auto md:h-[60px] drop-shadow-md">
       <div className="flex h-[35px] md:h-[60px] justify-center md:justify-between md:space-x-12 md:w-[1280px]">
         <Link to="/" className="flex items-center">
           <img
@@ -106,6 +107,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };

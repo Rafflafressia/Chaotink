@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <div className="about-box flex flex-col items-center my-12 lg:flex-row xl:mx-72">
+    <div className="about-box flex flex-col items-center py-16 lg:flex-row xl:mx-72">
       <div className="flex flex-col justify-center items-center m-8">
         <h1 className="text-4xl font-bold text-black m-4">
           This is <span className="text-[#16425b]">ME</span>

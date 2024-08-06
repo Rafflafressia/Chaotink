@@ -189,7 +189,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col items-center my-14 space-x-2 space-y-8">
+    <div className="flex flex-col items-center py-24 space-x-2 space-y-8">
       <h1 className="text-[#16425b] text-4xl font-bold">Contact</h1>
       {categories.map((category, index) => (
         <div key={index} className="mx-auto px-4">
