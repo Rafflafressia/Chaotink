@@ -7,7 +7,7 @@ import ScreenshotThree from "../../assets/answerables-screenshots-3.png";
 import ScreenshotFour from "../../assets/answerables-screenshots-4.png";
 import ScreenshotFive from "../../assets/answerables-screenshots-5.png";
 import ScreenshotSix from "../../assets/answerables-screenshot-6.png";
-import Trailer from "../../assets/Answerables_Trailer.webm";
+
 
 const AnswerablesPage = () => {
   useEffect(() => {
@@ -172,10 +172,7 @@ const AnswerablesPage = () => {
                 eventually party with the villagers.
               </p>
             </div>
-            <video width="600" controls className="rounded-lg">
-              <source src={Trailer} type="video/webm" />
-              Your browser does not support this video.
-            </video>
+
           </div>
         </div>
       </div>
