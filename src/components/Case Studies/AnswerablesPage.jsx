@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useCallback } from "react";
+import { useEffect } from "react";
 
 import HomeBG from "../../assets/answerables-hero.jpg";
 import ScreenshotOne from "../../assets/answerables-screenshot-1.png";
@@ -7,7 +7,7 @@ import ScreenshotThree from "../../assets/answerables-screenshots-3.png";
 import ScreenshotFour from "../../assets/answerables-screenshots-4.png";
 import ScreenshotFive from "../../assets/answerables-screenshots-5.png";
 import ScreenshotSix from "../../assets/answerables-screenshot-6.png";
-import Trailer from "../../assets/Answerables_Trailer.mp4";
+import Trailer from "../../assets/Answerables_Trailer.webm";
 
 const AnswerablesPage = () => {
   useEffect(() => {
@@ -106,52 +106,52 @@ const AnswerablesPage = () => {
           </p>
         </div>
         <div className="flex flex-col xl:mx-36 border-t-2 border-gray space-y-8">
-            <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">
-                Controls
-            </h3>
-            <div className="flex flex-col xl:flex-row justify-center mx-8 xl:mx-16">
-                <img
-                src={ScreenshotOne}
-                alt="Screenshot of Screen"
-                className="invisible fixed m-2 md:relative md:visible md:h-30 xl:w-4/12"
-                />
-                <div>
-                <h4 className="m-4 xl:mx-8 md:text-2xl font-bold">
-                    Tablet Controls:
-                </h4>
-                <ol className="list-disc m-4 md:text-lg xl:mx-16 xl:text-2xl">
-                    <li>
-                    Players have an onscreen joystick to move avatar forward,
-                    backward and strafe left and right.
-                    </li>
-                    <li>Players can drag the screen to move camera view around.</li>
-                    <li>Tapping on objects lets players interact with them.</li>
-                </ol>
-                </div>
+          <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">
+            Controls
+          </h3>
+          <div className="flex flex-col xl:flex-row justify-center mx-8 xl:mx-16">
+            <img
+              src={ScreenshotOne}
+              alt="Screenshot of Screen"
+              className="invisible fixed m-2 md:relative md:visible md:h-30 xl:w-4/12"
+            />
+            <div>
+              <h4 className="m-4 xl:mx-8 md:text-2xl font-bold">
+                Tablet Controls:
+              </h4>
+              <ol className="list-disc m-4 md:text-lg xl:mx-16 xl:text-2xl">
+                <li>
+                  Players have an onscreen joystick to move avatar forward,
+                  backward and strafe left and right.
+                </li>
+                <li>Players can drag the screen to move camera view around.</li>
+                <li>Tapping on objects lets players interact with them.</li>
+              </ol>
             </div>
+          </div>
 
-            <div className="flex flex-col xl:flex-row xl:flex-row-reverse justify-center mx-8 xl:mx-16">
-                <img
-                src={ScreenshotSix}
-                alt="Screenshot of Screen"
-                className="invisible fixed m-2 md:relative md:visible md:h-30 xl:w-4/12"
-                />
-                <div>
-                <h4 className="m-4 xl:mx-8 md:text-2xl font-bold">
-                    Keyboard and Mouse Controls:
-                </h4>
-                <ol className="list-disc m-4 md:text-lg xl:mx-16 xl:text-2xl">
-                    <li>
-                    Players can use WASD or the arrow keys to move their avatar
-                    around.
-                    </li>
-                    <li>Mouse controls avatar movement by default.</li>
-                    <li>
-                    Pressing the E key allows players to interact with objects.
-                    </li>
-                </ol>
-                </div>
+          <div className="flex flex-col xl:flex-row xl:flex-row-reverse justify-center mx-8 xl:mx-16">
+            <img
+              src={ScreenshotSix}
+              alt="Screenshot of Screen"
+              className="invisible fixed m-2 md:relative md:visible md:h-30 xl:w-4/12"
+            />
+            <div>
+              <h4 className="m-4 xl:mx-8 md:text-2xl font-bold">
+                Keyboard and Mouse Controls:
+              </h4>
+              <ol className="list-disc m-4 md:text-lg xl:mx-16 xl:text-2xl">
+                <li>
+                  Players can use WASD or the arrow keys to move their avatar
+                  around.
+                </li>
+                <li>Mouse controls avatar movement by default.</li>
+                <li>
+                  Pressing the E key allows players to interact with objects.
+                </li>
+              </ol>
             </div>
+          </div>
         </div>
         <div className="xl:mx-36 border-t-2 border-gray my-8">
           <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">
@@ -173,10 +173,7 @@ const AnswerablesPage = () => {
               </p>
             </div>
             <video width="600" controls className="rounded-lg">
-              <source
-                src="../../assets/Answerables_Trailer.mp4"
-                type="video/mp4"
-              />
+              <source src={Trailer} type="video/webm" />
               Your browser does not support this video.
             </video>
           </div>

@@ -11,7 +11,13 @@ function App() {
     "/about": "Arkaw Banerjee | | About",
     "/portfolio": "Arkaw Banerjee | | Portfolio",
     "/contact": "Arkaw Banerjee | | Contact",
-    "/Baketomo": "Arkaw Banerjee - Baketomo Case Study",
+    "/Bake": "Arkaw Banerjee - Baketomo",
+    "/Prem": "Arkaw Banerjee - Premier Custom Surfacing",
+    "/Star": "Arkaw Banerjee - Star Inventory Logistics",
+    "/Answ" : "Arkaw Banerjee - Answerables",
+    "/illustrations" : "Arkaw Banerjee - Illustrations",
+    "/graphic-design" : "Arkaw Banerjee - Graphic Design",
+    "/web-dev" : "Arkaw Banerjee - Web Development", 
   };
 
   const title =
