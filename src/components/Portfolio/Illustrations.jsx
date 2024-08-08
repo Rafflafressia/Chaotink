@@ -48,12 +48,12 @@ const Illustration = ({ src, alt }) => {
   });
 
   return (
-    <div ref={ref} className="p-4 lg:w-3/12 md:w-5/12 w-full">
+    <div ref={ref} className="p-4 lg:w-4/12 md:w-5/12 w-full">
       {inView && (
         <img
           src={src}
           alt={alt}
-          className="w-full h-auto object-cover shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#2f6690] rounded-2xl"
+          className="w-full h-auto object-cover shadow-md rounded-2xl"
         />
       )}
     </div>

@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useMemo } from "react";
 
 import Carousel from "../Carousel";
-import BackButton from "../BackButton";
+import BacktoTop from "../ScrollToTopButton";
 
 import StarBG from "../../assets/sil-bg.png";
 import StarLogo from "../../assets/star-inventory-logo.svg";
@@ -37,6 +37,7 @@ const StarInventoryPage = () => {
 
   return (
     <div className="space-y-4 py-8 lg:mx-32 xl:mx-48 2xl:mx-[500px]">
+      <BacktoTop />
       <div
         className="w-full p-4 flex flex-col space-y-4 items-center justify-center bg-opacity-30"
         id="home"
@@ -85,7 +86,7 @@ const StarInventoryPage = () => {
       title="Application Overview"
       headingClass={headingsOne}
       />
-
+      <p className="italic text-gray-400 mx-8">Click and drag left and right to cycle through images (swipe on mobile)</p>
       <Carousel images={images}/>
 
       <Section

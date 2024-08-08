@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useMemo, useCallback } from "react";
 
 import Carousel from "../Carousel";
-import BackButton from "../BackButton";
+import BacktoTop from "../ScrollToTopButton";
 import BaketomoNav from "../PresentationNav";
 import Footer from "../../components/Footer";
 import Navbar from "../Navbar";
@@ -51,7 +51,8 @@ const BaketomoInfoPage = () => {
   const images = [F5Minute_1, F5Minute_2, F5Minute_3];
 
   return (
-    <div className="py-8">
+    <div className="py-8 xl:mx-72">
+      <BacktoTop />
       <div className="w-full py-12" id="home" style={backgroundStyle}>
         <div className="glass flex flex-col justify-center items-center shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] bg-green-900 mx-4 md:mx-12 lg:mx-36 rounded-[10px] my-2 p-4 space-y-4">
           <img src={BaketomoLogo} alt="Baketomo Logo" className="w-10/12 sm:w-2/3" />
@@ -60,15 +61,15 @@ const BaketomoInfoPage = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-row justify-center items-center lg:my-8 md:mx-12 xl:mx-36">
+      <div className="flex flex-row justify-center items-center lg:my-8 md:mx-12 xl:mx-16">
         <div className="flex flex-col justify-center items-start">
           <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">Summary</h3>
-          <p className="text-[15px] mx-4 xl:text-[30px] xl:mx-8">
+          <p className="text-[15px] mx-4 xl:text-[20px] xl:mx-8">
             Baketomo at its core is a game that allows players to collect monsters by exploring a dungeon. Each dungeon run gives players the opportunity to find unique monsters that can be captured.
           </p>
           <div className="flex flex-col justify-center items-start bg-gray-200 m-2 p-4 rounded-[10px]">
             <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">Game Loop</h3>
-            <ol className="list-decimal list-inside text-[15px] mx-4 space-y-2 xl:text-[30px] xl:mx-8">
+            <ol className="list-decimal list-inside text-[15px] mx-4 space-y-2 xl:text-[20px] xl:mx-8">
               <li>Players receive a random starter monster,</li>
               <li>Players select a dungeon from the map to enter,</li>
               <li>Players choose attacks to defeat random monsters,</li>
@@ -87,6 +88,7 @@ const BaketomoInfoPage = () => {
       </div>
       <div className="border-t-[0.5px] border-gray p-2 m-2">
         <h1 className="text-3xl font-bold m-4 text-[#4a4e69] xl:text-[40px] md:mx-12 lg:mx-36">First 5-Minutes</h1>
+        <p className="italic text-gray-400 mx-36">Click and drag left and right to cycle through images (swipe on mobile)</p>
         <Carousel images={images} />
       </div>
       <div className="flex flex-col border-t-[0.5px] border-gray p-2 m-2 xl:flex-row md:mx-12 lg:mx-12 xl:mx-36">

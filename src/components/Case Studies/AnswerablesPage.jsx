@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Carasoul from "../Carousel";
+import BacktoTop from "../ScrollToTopButton";
 
 import HomeBG from "../../assets/answerables-hero.jpg";
 import ScreenshotOne from "../../assets/answerables-screenshot-1.png";
@@ -16,6 +18,7 @@ const AnswerablesPage = () => {
 
   return (
     <div className="py-8">
+      <BacktoTop />
       <div className="w-full flex justify-center" id="home">
         <img src={HomeBG} alt="Answerables logo hero" />
       </div>
@@ -171,6 +174,22 @@ const AnswerablesPage = () => {
                 villagers request, they get access to more of the map and
                 eventually party with the villagers.
               </p>
+            </div>
+            <p className="text-2xl">This is where a video goes - bare with me while I get it ready</p>
+          </div>
+        </div>
+
+        <div className="xl:mx-36 border-t-2 border-gray my-8">
+          <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">
+            Production
+          </h3>
+          <div className="flex flex-col items-center 2xl:flex-row">
+            <div className="2xl:text-2xl">
+              <p className="m-4 xl:m-8">
+                Unfortunately, Answerables was not able to hit shelves officially. Here are a collection of images of Answerables and what it could've been.
+                You click and drag (or drag if you're on mobile) to go through the screenshots.
+              </p>
+              {/* <Carasoul /> */}
             </div>
 
           </div>
