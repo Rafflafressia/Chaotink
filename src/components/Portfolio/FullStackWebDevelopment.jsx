@@ -67,13 +67,13 @@ const fullStackProjects = [
 
 const FullStackDevelopmentCards = () => {
   return (
-    <section className="px-8 py-24 lg:mx-32 xl:mx-72">
+    <section className="px-4 py-24 lg:mx-32 xl:mx-96">
       <div className="flex flex-col justify-center items-start space-y-4">
         <h1 className="text-[#16425b] text-4xl md:text-5xl font-bold">
           Full Stack
           <span className="text-[#2F6690]"> Web Development</span>
         </h1>
-        <p className="text-[#2F6690] border-t-2 border-[#B9BAB7] border-b-2 p-8 md:text-lg">
+        <p className="text-[#2F6690] border-t-2 border-gray p-8 md:text-lg">
           The following is a collection of applications I've built while
           attending University of Toronto. The applications demonstrate not only
           a progressional growth as a full stack developer but also the ability
@@ -83,42 +83,45 @@ const FullStackDevelopmentCards = () => {
         </p>
       </div>
 
-      <span className="border-b-[1px]"></span>
+      <div className="flex flex-row flex-wrap space-y-4 xl:space-x-4">
+        {fullStackProjects.map((project, index) => (
+          <div
+            key={index}
+            className="full-stack-development-card flex items-center justify-center xl:justify-start my-4 space-x-2 border-t-2 border-gray py-4"
+          >
+              <img
+                src={project && project.imageUrl}
+                alt={project && project.title}
+                className="invisible fixed md:relative md:visible md:w-5/12 p-2 shrink-1 shadow-md bg-slate-100"
+              />
+            <div className="projDesc flex flex-col space-y-4 p-4">
+              <h3 className="text-[#16425b] text-2xl font-bold">
+                {project && project.title}
+              </h3>
+              <p className="text-[#16425b] text-md">
+                {project && project.description}
+              </p>
+              <div className="flex flex-row justify-start items-center space-x-4 text-sm">
+                <a
+                  href={project.githubURL}
+                  className="flex flex-row p-2 bg-black text-white space-x-4 items-center justify-center [background:#2f6690]"
+                >
+                  <p>GitHub Repo</p>{" "}
+                  <img src={icon.github} className="w-[30px]" />
+                </a>
 
-      {fullStackProjects.map((project, index) => (
-        <div
-          key={index}
-          className="full-stack-development-card flex my-4 space-x-2 bg-gray-300 shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#16425b] rounded-2xl"
-        >
-          <div className="projImg flex fixed md:relative p-4 lg:w-[450px] md:w-11/12 w-full">
-            <img
-              src={project && project.imageUrl}
-              alt={project && project.title}
-              className="invisible w-0 md:visible md:w-full md:h-auto md:object-cover p-4"
-            />
-          </div>
-          <div className="projDesc flex flex-col">
-            <h3 className="text-[#16425b] text-2xl font-bold my-4 ml-2">
-              {project && project.title}
-            </h3>
-            <p className="text-[#16425b] font-bold text-xl mx-2">
-              {project && project.description}
-            </p>
-            <div className="flex flex-row justify-start items-center">
-              <button>
-                <a href={project.githubURL}>
-                  <img src={icon.github} className="w-[30px] mx-2 py-6" />
+                <a
+                  href={project.deploymentURL}
+                  className="flex flex-row p-2 bg-black text-white space-x-4 items-center justify-center [background:#2f6690]"
+                >
+                  <p>Deployment Link</p>{" "}
+                  <img src={icon.deployment} className="w-[30px]" />
                 </a>
-              </button>
-              <button>
-                <a href={project.deploymentURL}>
-                  <img src={icon.deployment} className="w-[30px] mx-2 py-6" />
-                </a>
-              </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };

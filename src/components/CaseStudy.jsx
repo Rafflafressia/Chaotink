@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const CaseStudy = ({ img, title, description, label }) => {
-
-  const truncatedTitle = title.substring(0, 4)
+  const truncatedTitle = title.substring(0, 4);
 
   return (
     <div className="lg:m-1 border-t-2 border-gray xl:border-t-0 py-4">
@@ -30,7 +29,10 @@ const CaseStudy = ({ img, title, description, label }) => {
           <h1 className="mb-4 font-bold text-2xl md:mb-0">{title}</h1>
           <div className="flex flex-col justify-center">
             <p>{description}</p>
-            <Link to={truncatedTitle} className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-1 my-4 sm:p-2 sm:mx-3 sm:my-4 md:mx-12 lg:mx-0 lg:p-0">
+            <Link
+              to={truncatedTitle}
+              className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center py-[6px] px-[3px] my-4 sm:p-2 sm:mx-3 sm:my-4 md:mx-12 lg:mx-0 lg:p-0"
+            >
               <p className="mx-2 text-sm md:text-md font-bold lg:mx-0">
                 See case study
               </p>{" "}

@@ -1,3 +1,6 @@
+import React from "react";
+import { useInView } from "react-intersection-observer";
+
 import PortfolioImg1 from "../../assets/illust-1.jpg";
 import PortfolioImg2 from "../../assets/illust-2.jpg";
 import PortfolioImg3 from "../../assets/illust-3.jpg";
@@ -29,98 +32,57 @@ import PortfolioImg28 from "../../assets/RadioDemon.jpg";
 import PortfolioImg29 from "../../assets/Trash Panda.jpg";
 import PortfolioImg30 from "../../assets/wolf-girl.jpg";
 
-const illustrations = [
-  {
-    imageUrl: PortfolioImg1,
-  },
-  {
-    imageUrl: PortfolioImg2,
-  },
-  {
-    imageUrl: PortfolioImg3,
-  },
-  {
-    imageUrl: PortfolioImg4,
-  },
-  {
-    imageUrl: PortfolioImg5,
-  },
-  {
-    imageUrl: PortfolioImg6,
-  },
-  {
-    imageUrl: PortfolioImg7,
-  },
-  {
-    imageUrl: PortfolioImg8,
-  },
-  {
-    imageUrl: PortfolioImg9,
-  },
-  {
-    imageUrl: PortfolioImg10,
-  },
-  {
-    imageUrl: PortfolioImg11,
-  },
-  {
-    imageUrl: PortfolioImg12,
-  },
-  {
-    imageUrl: PortfolioImg13,
-  },
-  {
-    imageUrl: PortfolioImg14,
-  },
-  {
-    imageUrl: PortfolioImg15,
-  },
-  {
-    imageUrl: PortfolioImg16,
-  },
-  {
-    imageUrl: PortfolioImg17,
-  },
-  {
-    imageUrl: PortfolioImg18,
-  },
-  {
-    imageUrl: PortfolioImg19,
-  },
-  {
-    imageUrl: PortfolioImg20,
-  },
-  {
-    imageUrl: PortfolioImg21,
-  },
-  {
-    imageUrl: PortfolioImg22,
-  },
-  {
-    imageUrl: PortfolioImg23,
-  },
-  {
-    imageUrl: PortfolioImg24,
-  },
-  {
-    imageUrl: PortfolioImg25,
-  },
-  {
-    imageUrl: PortfolioImg26,
-  },
-  {
-    imageUrl: PortfolioImg27,
-  },
-  {
-    imageUrl: PortfolioImg28,
-  },
-  {
-    imageUrl: PortfolioImg29,
-  },
-  {
-    imageUrl: PortfolioImg30,
-  },
+const images = [
+  PortfolioImg1,
+  PortfolioImg2,
+  PortfolioImg3,
+  PortfolioImg4,
+  PortfolioImg5,
+  PortfolioImg6,
+  PortfolioImg7,
+  PortfolioImg8,
+  PortfolioImg9,
+  PortfolioImg10,
+  PortfolioImg11,
+  PortfolioImg12,
+  PortfolioImg13,
+  PortfolioImg14,
+  PortfolioImg15,
+  PortfolioImg16,
+  PortfolioImg17,
+  PortfolioImg18,
+  PortfolioImg19,
+  PortfolioImg20,
+  PortfolioImg21,
+  PortfolioImg22,
+  PortfolioImg23,
+  PortfolioImg24,
+  PortfolioImg25,
+  PortfolioImg26,
+  PortfolioImg27,
+  PortfolioImg28,
+  PortfolioImg29,
+  PortfolioImg30,
 ];
+
+const Illustration = ({ src, alt }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <div ref={ref} className="p-4 lg:w-4/12 md:w-5/12 w-full">
+      {inView && (
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-auto object-cover shadow-md rounded-2xl"
+        />
+      )}
+    </div>
+  );
+};
 
 const IllustrationsCards = () => {
   return (
@@ -142,14 +104,12 @@ const IllustrationsCards = () => {
           </p>
         </div>
         <div className="flex flex-wrap justify-center items-center m-8">
-          {illustrations.map((illustration, index) => (
-            <div key={index} className="p-4 lg:w-3/12 md:w-5/12 w-full">
-              <img
-                src={illustration.imageUrl}
-                alt={`Illustration ${index}`}
-                className="w-full h-auto object-cover shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#2f6690] rounded-2xl"
-              />
-            </div>
+          {images.map((image, index) => (
+            <Illustration
+              key={index}
+              src={image}
+              alt={`Illustration ${index + 1}`}
+            />
           ))}
         </div>
       </div>
