@@ -158,10 +158,10 @@ const About = () => {
   ];
 
   return (
-    <div className="about-box flex flex-col-reverse py-8 md:py-16 items-center lg:flex-row lg:py-0 xl:mx-72">
+    <div className="about-box flex flex-col-reverse py-8 md:py-16 items-center justify-center lg:flex-row lg:py-0 xl:mx-72">
       <img src={ME} alt="My Picture" className="md:w-9/12" />
       <div className="m-8 lg:mx-12 flex-col items-center justify-center">
-        <h1 className="text-[60px] py-8">
+        <h1 className="xl:text-[60px] lg:text-[45px] py-8">
           Full Stack Developer, Graphic Designer, Illustrator
         </h1>
         <p className="text-lg ">
@@ -181,7 +181,7 @@ const About = () => {
         </p>
         <Link
           to="/Bake"
-          className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-8 mx-8 md:mx-32 lg:mx-48"
+          className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-8 mx-8 md:mx-32 lg:mx-32 xl:mx-96"
         >
           <p className="mx-2 font-bold">See case study</p> <FaArrowRightLong />
         </Link>

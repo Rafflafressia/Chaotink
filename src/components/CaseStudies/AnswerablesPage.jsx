@@ -5,6 +5,7 @@ import HomeBG from "../../assets/answerables/answerables-hero.jpg";
 import ScreenshotOne from "../../assets/answerables/answerables-screenshot-1.png";
 import ScreenshotFour from "../../assets/answerables/answerables-screenshots-4.png";
 import ScreenshotSix from "../../assets/answerables/answerables-screenshot-6.png";
+import Trailer from "../../assets/answerables/Answerables_Trailer.webm";
 
 const AnswerablesPage = () => {
   useEffect(() => {
@@ -170,9 +171,10 @@ const AnswerablesPage = () => {
                 eventually party with the villagers.
               </p>
             </div>
-            <p className="text-2xl">
-              This is where a video goes - bare with me while I get it ready
-            </p>
+            <video controls className="w-1/2">
+              <source src={Trailer} type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
