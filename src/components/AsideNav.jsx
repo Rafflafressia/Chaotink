@@ -2,7 +2,7 @@ import BackToTop from "../components/ScrollToTopButton"
 
 const SubNav = ({ categories, onSelectCategory }) => {
   return (
-    <aside className="fixed top-[125px] left-10 [background:#16425b] shadow-lg rounded-lg p-4 w-[220px]">
+    <aside className="invisible xl:visible fixed top-[125px] left-10 [background:#16425b] shadow-lg rounded-lg p-4 xl:w-[220px]">
       <ul className="list-none flex flex-col justify-center items-start space-y-4">
         {categories.map((category, index) => (
           <li key={index} className="w-full">
