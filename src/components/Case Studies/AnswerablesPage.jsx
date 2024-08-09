@@ -1,15 +1,10 @@
 import { useEffect } from "react";
-import Carasoul from "../Carousel";
 import BacktoTop from "../ScrollToTopButton";
 
 import HomeBG from "../../assets/answerables-hero.jpg";
 import ScreenshotOne from "../../assets/answerables-screenshot-1.png";
-import ScreenshotTwo from "../../assets/answerables-screenshot-2.jpeg";
-import ScreenshotThree from "../../assets/answerables-screenshots-3.png";
 import ScreenshotFour from "../../assets/answerables-screenshots-4.png";
-import ScreenshotFive from "../../assets/answerables-screenshots-5.png";
 import ScreenshotSix from "../../assets/answerables-screenshot-6.png";
-
 
 const AnswerablesPage = () => {
   useEffect(() => {
@@ -133,7 +128,7 @@ const AnswerablesPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col xl:flex-row xl:flex-row-reverse justify-center mx-8 xl:mx-16">
+          <div className="flex flex-col xl:flex-row-reverse justify-center mx-8 xl:mx-16">
             <img
               src={ScreenshotSix}
               alt="Screenshot of Screen"
@@ -175,7 +170,9 @@ const AnswerablesPage = () => {
                 eventually party with the villagers.
               </p>
             </div>
-            <p className="text-2xl">This is where a video goes - bare with me while I get it ready</p>
+            <p className="text-2xl">
+              This is where a video goes - bare with me while I get it ready
+            </p>
           </div>
         </div>
 
@@ -186,12 +183,12 @@ const AnswerablesPage = () => {
           <div className="flex flex-col items-center 2xl:flex-row">
             <div className="2xl:text-2xl">
               <p className="m-4 xl:m-8">
-                Unfortunately, Answerables was not able to hit shelves officially. Here are a collection of images of Answerables and what it could've been.
-                You click and drag (or drag if you're on mobile) to go through the screenshots.
+                Unfortunately, Answerables was not able to hit shelves
+                officially. Here are a collection of images of Answerables and
+                what it could've been. You click and drag (or drag if you're on
+                mobile) to go through the screenshots.
               </p>
-              {/* <Carasoul /> */}
             </div>
-
           </div>
         </div>
       </div>
