@@ -1,5 +1,6 @@
 import SitePhoto from "../assets/hero-page.png";
 import { Link } from "react-router-dom";
+import {useEffect} from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CaseStudy from "../components/CaseStudy";
@@ -7,10 +8,13 @@ import CaseStudy from "../components/CaseStudy";
 import Answerables from "../assets/answerables/answerables-card.png";
 import Baketomo from "../assets/mobile-game-card.png";
 import StarInventory from "../assets/full-stack-card.png";
-import SoldBig from "../assets/graphic-design-card.png";
 import PremiumCustom from "../assets/premium-custom-card.png";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
 
   const goToLinkedIn = () => {

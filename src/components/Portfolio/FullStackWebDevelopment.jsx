@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Bamboo from "../../assets/bamboo-homepage.png";
 import JATE from "../../assets/JATE-application.png";
 import MERN from "../../assets/MERN-application.png";
@@ -66,8 +68,12 @@ const fullStackProjects = [
 ];
 
 const FullStackDevelopmentCards = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <section className="px-4 py-24 lg:mx-32 xl:mx-96">
+    <section className="px-8 py-24 lg:mx-32 xl:mx-72">
       <div className="flex flex-col justify-center items-start space-y-4">
         <h1 className="text-[#16425b] text-4xl md:text-5xl font-bold">
           Full Stack
@@ -89,11 +95,11 @@ const FullStackDevelopmentCards = () => {
             key={index}
             className="full-stack-development-card flex items-center justify-center xl:justify-start my-4 space-x-2 border-t-2 border-gray py-4"
           >
-              <img
-                src={project && project.imageUrl}
-                alt={project && project.title}
-                className="invisible fixed md:relative md:visible md:w-5/12 p-2 shrink-1 shadow-md bg-slate-100"
-              />
+            <img
+              src={project && project.imageUrl}
+              alt={project && project.title}
+              className="invisible fixed md:relative md:visible md:w-5/12 p-2 shrink-1 shadow-md bg-slate-100"
+            />
             <div className="projDesc flex flex-col space-y-4 p-4">
               <h3 className="text-[#16425b] text-2xl font-bold">
                 {project && project.title}

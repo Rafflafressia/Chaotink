@@ -17,11 +17,6 @@ import StarInventory from "./components/CaseStudies/StarInventoryPage.jsx";
 import PremierCustom from "./components/CaseStudies/PremierCustomPage.jsx";
 import Answerables from "./components/CaseStudies/AnswerablesPage.jsx";
 
-//Portfolio
-import Illustrations from "./components/Portfolio/Illustrations.jsx";
-import GraphicDesign from "./components/Portfolio/GraphicDesign.jsx";
-import WebDev from "./components/Portfolio/FullStackWebDevelopment.jsx";
-
 // Page routes
 const router = createBrowserRouter([
   {
@@ -58,20 +53,8 @@ const router = createBrowserRouter([
         element: <PremierCustom />,
       },
       {
-        path: "Illustrations",
-        element: <Illustrations />,
-      },
-      {
         path: "Answ",
         element: <Answerables />,
-      },
-      {
-        path: "/graphic-design",
-        element: <GraphicDesign />,
-      },
-      {
-        path: "/web-dev",
-        element: <WebDev />,
       },
     ],
   },

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import ProjectOne from "../../assets/Artboard 3-100.jpg";
 import ProjectTwo from "../../assets/Artboard 4-100.jpg";
 import ProjectThree from "../../assets/Artboard 5-100.jpg";
@@ -39,6 +41,10 @@ const graphicDesignProjects = [
 ];
 
 const GraphicDesignCards = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="px-8 py-24 lg:mx-32 xl:mx-72">
       <div className="graphic-design-cards flex flex-col mx-auto items-center">

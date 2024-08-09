@@ -1,4 +1,4 @@
-import React from "react";
+import {useEffect} from "react";
 import { useInView } from "react-intersection-observer";
 
 import PortfolioImg1 from "../../assets/illust-1.jpg";
@@ -85,6 +85,10 @@ const Illustration = ({ src, alt }) => {
 };
 
 const IllustrationsCards = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <section className="px-8 py-24 lg:mx-32 xl:mx-72">
       <div className="illustrations-cards justify-center items-center">
