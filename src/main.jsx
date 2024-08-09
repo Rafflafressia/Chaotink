@@ -12,10 +12,10 @@ import Portfolio from "./components/Portfolio/Portfolio.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 
 // Case Studies
-import Baketomo from "./components/Case Studies/BaketomoInfoPage.jsx";
-import StarInventory from "./components/Case Studies/StarInventoryPage.jsx";
-import PremierCustom from "./components/Case Studies/PremierCustomPage.jsx";
-import Answerables from "./components/Case Studies/AnswerablesPage.jsx";
+import Baketomo from "./components/CaseStudies/BaketomoInfoPage.jsx";
+import StarInventory from "./components/CaseStudies/StarInventoryPage.jsx";
+import PremierCustom from "./components/CaseStudies/PremierCustomPage.jsx";
+import Answerables from "./components/CaseStudies/AnswerablesPage.jsx";
 
 //Portfolio
 import Illustrations from "./components/Portfolio/Illustrations.jsx";
