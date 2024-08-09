@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import BacktoTop from "../ScrollToTopButton";
 
-import HomeBG from "../../assets/answerables-hero.jpg";
-import ScreenshotOne from "../../assets/answerables-screenshot-1.png";
-import ScreenshotFour from "../../assets/answerables-screenshots-4.png";
-import ScreenshotSix from "../../assets/answerables-screenshot-6.png";
+import HomeBG from "../../assets/answerables/answerables-hero.jpg";
+import ScreenshotOne from "../../assets/answerables/answerables-screenshot-1.png";
+import ScreenshotFour from "../../assets/answerables/answerables-screenshots-4.png";
+import ScreenshotSix from "../../assets/answerables/answerables-screenshot-6.png";
 
 const AnswerablesPage = () => {
   useEffect(() => {

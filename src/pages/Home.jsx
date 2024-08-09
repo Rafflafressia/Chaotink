@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CaseStudy from "../components/CaseStudy";
 
-import Answerables from "../assets/answerables-card.png";
+import Answerables from "../assets/answerables/answerables-card.png";
 import Baketomo from "../assets/mobile-game-card.png";
 import StarInventory from "../assets/full-stack-card.png";
 import SoldBig from "../assets/graphic-design-card.png";
