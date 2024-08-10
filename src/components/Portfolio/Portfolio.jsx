@@ -26,19 +26,17 @@ const Portfolio = () => {
     window.scrollTo(0, 0);
   };
 
-  const categories = [
-    "Full Stack Development",
-    "Graphic Design",
-    "Illustration",
-  ];
-
   return (
     <div className="portfolio-container py-16 flex flex-col items-center">
       <div>
         {/* Conditionally render PortfolioSubNavigation */}
         {isVisible && (
           <PortfolioSubNavigation
-            categories={categories}
+            categories={[
+              "Full Stack Development",
+              "Graphic Design",
+              "Illustration",
+            ]}
             onSelectCategory={handleCategorySelect}
           />
         )}
@@ -51,15 +49,6 @@ const Portfolio = () => {
           <GraphicDesign />
         )}
         {!isVisible && currentCategory === "Illustration" && <Illustrations />}
-
-        {/* Button to go back to categories */}
-        {!isVisible && (
-          <SideNav
-            categories={categories}
-            onSelectCategory={handleCategorySelect}
-            onBackToNavigation={handleBackToNavigation}
-          />
-        )}
       </div>
     </div>
   );

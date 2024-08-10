@@ -75,7 +75,14 @@ const FullStackDevelopmentCards = () => {
   }, []);
 
   return (
-    <section className="px-8 md:py-8 xl:py-24 lg:mx-32 xl:mx-72">
+    <section className="px-8 pt-24 md:py-8 xl:py-24 lg:mx-32 xl:mx-72">
+      <SideNav
+        categories={[
+          ["Full Stack Development", "web-dev"],
+          ["Graphic Design", "graphic-design"],
+          ["Illustration", "illustrations"],
+        ]}
+      />
       <div className="flex flex-col justify-center items-start space-y-4">
         <h1 className="text-[#16425b] text-4xl md:text-5xl font-bold">
           Full Stack

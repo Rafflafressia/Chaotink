@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import SiteLogo from "../assets/browser-icon.svg";
 
@@ -8,11 +8,11 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-
-  const currentPage = useLocation().pathname;
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPage = location.pathname;
 
   const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
-
   const goToLinkedIn = () => {
     window.open(linkedInURL, "_blank");
   };
@@ -44,9 +44,18 @@ const Navbar = () => {
     ["Portfolio", "portfolio"],
   ];
 
+  const handleLinkClick = (url) => {
+    if (currentPage === `/${url}`) {
+      // Refresh the page if already on the current page
+      window.location.reload();
+    } else {
+      navigate(url);
+    }
+  };
+
   return (
     <div className="fixed w-full z-50">
-      <div className="w-full h-20 fixed [background:#b9bab7] shadow-lg"></div>
+      <div className="w-full h-14 md:h-20 fixed [background:#b9bab7] shadow-lg"></div>
       <div className="h-[35px] flex justify-center items-center px-4 [background:#16425b] mx-auto md:h-[60px] drop-shadow-md">
         <div className="flex h-[35px] md:h-[60px] justify-center md:justify-between md:space-x-12 md:w-[1280px]">
           <Link to="/" className="flex items-center space-x-4">
@@ -62,14 +71,14 @@ const Navbar = () => {
 
           <nav className="flex space-x-12 invisible md:visible">
             {pages.map(([title, url]) => (
-              <Link
+              <button
                 key={url}
-                to={url}
-                className={`nav-link text-sm md:text-lg text-[#d9dcd6] flex items-center font-medium`}
+                className="nav-link text-sm md:text-lg text-[#d9dcd6] flex items-center font-medium"
                 title={title}
+                onClick={() => handleLinkClick(url)}
               >
                 {title}
-              </Link>
+              </button>
             ))}
           </nav>
 
@@ -88,14 +97,16 @@ const Navbar = () => {
               <div className="bg-white h-screen w-screen rounded shadow-lg flex flex-col justify-center items-center">
                 <nav className="flex flex-col text-center space-y-12 mt-4">
                   {pages.map(([title, url]) => (
-                    <Link
+                    <button
                       key={url}
-                      to={url}
                       className="text-3xl font-medium text-[#16425b]"
-                      onClick={toggleMenu} // Close modal when link is clicked
+                      onClick={() => {
+                        handleLinkClick(url);
+                        toggleMenu(); // Close modal when link is clicked
+                      }}
                     >
                       {title}
-                    </Link>
+                    </button>
                   ))}
                 </nav>
                 <div className="flex flex-row pt-12 space-x-7">
@@ -114,4 +125,5 @@ const Navbar = () => {
     </div>
   );
 };
+
 export default Navbar;

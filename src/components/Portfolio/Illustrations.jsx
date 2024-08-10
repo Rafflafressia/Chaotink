@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
+import SideNav from "../AsideNav";
+
 import PortfolioImg1 from "../../assets/illust-1.jpg";
 import PortfolioImg2 from "../../assets/illust-2.jpg";
 import PortfolioImg3 from "../../assets/illust-3.jpg";
@@ -90,7 +92,14 @@ const IllustrationsCards = () => {
   }, []);
 
   return (
-    <section className="px-8 md:py-8 xl:py-24 lg:mx-32 xl:mx-72">
+    <section className="px-8 pt-24 md:py-8 xl:py-24 lg:mx-32 xl:mx-72">
+      <SideNav
+        categories={[
+          ["Full Stack Development", "web-dev"],
+          ["Graphic Design", "graphic-design"],
+          ["Illustration", "illustrations"],
+        ]}
+      />
       <div className="illustrations-cards justify-center items-center">
         <div className="flex flex-col justify-center items-start space-y-4">
           <h1 className="text-[#16425b] text-5xl font-bold">

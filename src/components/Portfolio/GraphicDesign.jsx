@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import SideNav from "../AsideNav";
 
 import ProjectOne from "../../assets/Artboard 3-100.jpg";
 import ProjectTwo from "../../assets/Artboard 4-100.jpg";
@@ -11,33 +12,15 @@ import ProjectEight from "../../assets/Artboard 10-100.jpg";
 import ProjectNine from "../../assets/Artboard 11-100.jpg";
 
 const graphicDesignProjects = [
-  {
-    projectUrl: ProjectOne,
-  },
-  {
-    projectUrl: ProjectTwo,
-  },
-  {
-    projectUrl: ProjectThree,
-  },
-  {
-    projectUrl: ProjectFour,
-  },
-  {
-    projectUrl: ProjectFive,
-  },
-  {
-    projectUrl: ProjectSix,
-  },
-  {
-    projectUrl: ProjectSeven,
-  },
-  {
-    projectUrl: ProjectEight,
-  },
-  {
-    projectUrl: ProjectNine,
-  },
+  { projectUrl: ProjectOne, description: "Project One Description" },
+  { projectUrl: ProjectTwo, description: "Project Two Description" },
+  { projectUrl: ProjectThree, description: "Project Three Description" },
+  { projectUrl: ProjectFour, description: "Project Four Description" },
+  { projectUrl: ProjectFive, description: "Project Five Description" },
+  { projectUrl: ProjectSix, description: "Project Six Description" },
+  { projectUrl: ProjectSeven, description: "Project Seven Description" },
+  { projectUrl: ProjectEight, description: "Project Eight Description" },
+  { projectUrl: ProjectNine, description: "Project Nine Description" },
 ];
 
 const GraphicDesignCards = () => {
@@ -46,9 +29,16 @@ const GraphicDesignCards = () => {
   }, []);
 
   return (
-    <section className="px-8 md:py-8 xl:py-24 lg:mx-32 xl:mx-72">
+    <section className="px-8 pt-24 md:py-8 xl:py-24 lg:mx-32 xl:mx-72">
+      <SideNav
+        categories={[
+          ["Full Stack Development", "web-dev"],
+          ["Graphic Design", "graphic-design"],
+          ["Illustration", "illustrations"],
+        ]}
+      />
       <div className="graphic-design-cards flex flex-col mx-auto items-center">
-        <div className="flex flex-col justify-center items-start space-y-4">
+        <header className="flex flex-col justify-center items-start space-y-4">
           <h1 className="text-[#16425b] text-5xl font-bold">
             Graphic
             <span className="text-[#2F6690]"> Design</span>
@@ -61,14 +51,14 @@ const GraphicDesignCards = () => {
             that I've done over the years. I believe that these projects each
             provided a unique challenge and I'm proud of the results.
           </p>
-        </div>
+        </header>
         <div className="flex flex-wrap justify-center items-center my-8 space-y-8">
-          {graphicDesignProjects.map((graphicProjects, index) => (
+          {graphicDesignProjects.map((project, index) => (
             <div key={index} className="w-full">
               <img
-                src={graphicProjects.projectUrl}
-                alt={`Illustration ${index}`}
-                className="w-full h-auto object-cover shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#2f6690]"
+                src={project.projectUrl}
+                alt={project.description}
+                className="w-full h-auto object-cover shadow-md border-3 border-solid border-[#2f6690]"
               />
             </div>
           ))}

@@ -1,4 +1,5 @@
 import ME from "../../assets/profile-picture.jpeg";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 import {
@@ -35,6 +36,10 @@ import {
 } from "react-icons/si";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const categories = [
     {
       name: "Graphic Proficiencies",

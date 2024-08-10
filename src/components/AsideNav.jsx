@@ -1,15 +1,11 @@
-import BackToTop from "../components/ScrollToTopButton";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const SubNav = ({ categories, onSelectCategory }) => {
+const SubNav = ({ categories }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.scrollY > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+    setIsVisible(window.scrollY > 300);
   };
 
   const scrollToTop = () => {
@@ -27,16 +23,16 @@ const SubNav = ({ categories, onSelectCategory }) => {
   }, []);
 
   return (
-    <aside className="visible fixed px-2 rounded-2xl left-1/2 -translate-x-1/2 bottom-[80px] xl:-translate-x-0 xl:bottom-auto xl:top-[125px] xl:left-10 [background:#16425b] xl:shadow-lg xl:rounded-lg xl:p-4 xl:w-[220px]">
-      <ul className="list-none flex space-x-8 xl:flex-col justify-center items-center xl:space-x-0 xl:items-start xl:space-y-4">
-        {categories.map((category, index) => (
-          <li key={index} className="w-full">
-            <button
-              className="w-full text-md text-center xl:text-left py-2 px-2 xl:text-lg xl:px-4 text-white rounded-lg hover:bg-blue-100 xl:hover:text-black focus:outline-none transition duration-300 ease-in-out"
-              onClick={() => onSelectCategory(category)}
+    <aside className="visible fixed z-50 px-2 rounded-2xl left-1/2 -translate-x-1/2 bottom-[80px] xl:-translate-x-0 xl:bottom-auto xl:top-[125px] xl:left-10 [background:#16425b] xl:shadow-lg xl:rounded-lg xl:p-4 xl:w-[220px]">
+      <ul className="list-none flex space-x-8 xl:flex-col justify-center items-center xl:space-x-0 xl:items-start xl:space-y-8">
+        {categories.map(([category, path], index) => (
+          <li key={index} className="w-full flex flex-row">
+            <Link
+              to={`/${path}`} // Ensure this path aligns with your routing setup
+              className="w-full text-md text-center xl:text-left py-2 px-2 xl:text-lg text-white rounded-lg hover:bg-blue-100 xl:hover:text-black focus:outline-none transition duration-300 ease-in-out"
             >
               {category}
-            </button>
+            </Link>
           </li>
         ))}
       </ul>
