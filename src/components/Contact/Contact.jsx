@@ -118,9 +118,9 @@ const Contact = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center justify-center pb-[100px] space-y-4 lg:m-8"
+          className="flex flex-col mx-4 items-center justify-center pb-[100px] space-y-4 md:m-8"
         >
-          <div className="flex flex-row space-x-4">
+          <div className="flex flex-col w-full space-y-4 md:space-y-0 md:flex-row md:space-x-4">
             <div className="flex flex-col">
               <input
                 type="text"
@@ -152,7 +152,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex flex-row space-x-4">
+          <div className="flex flex-col w-full space-y-4 md:space-y-0 md:flex-row md:space-x-4">
             <div className="flex flex-col">
               <input
                 type="text"
@@ -184,7 +184,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-11/12 items-center justify-center space-y-4">
+          <div className="flex flex-col w-full items-center justify-center space-y-4">
             <textarea
               name="message"
               className="text-center w-full"

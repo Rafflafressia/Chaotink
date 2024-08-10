@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import bgFS from "../../assets/web-development.jpg";
 import bgGD from "../../assets/graphic-design.jpg";
