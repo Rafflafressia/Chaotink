@@ -1,231 +1,208 @@
 import { useState } from "react";
-import {
-  SiAdobeillustrator,
-  SiAdobeindesign,
-  SiAdobephotoshop,
-  SiAffinitydesigner,
-  SiAutodeskmaya,
-  SiBlender,
-  SiBootstrap,
-  SiCanva,
-  SiCss3,
-  SiFacebook,
-  SiFigma,
-  SiGithub,
-  SiHtml5,
-  SiJavascript,
-  SiLinkedin,
-  SiNodedotjs,
-  SiReact,
-  SiSequelize,
-  SiExpress,
-  SiMongodb,
-  SiMongoose,
-  SiMysql,
-  SiVite,
-  SiReactrouter,
-  SiTailwindcss,
-  SiJest,
-  SiPwa,
-  SiGraphql,
-  SiApollographql,
-  SiInstagram,
-} from "react-icons/si";
-
-import { MdCloudDownload } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
-  const categories = [
-    {
-      name: "Graphic Proficiencies",
-      proficiencies: [
-        {
-          name: "Adobe Illustrator",
-          icon: SiAdobeillustrator,
-        },
-        {
-          name: "Canva",
-          icon: SiCanva,
-        },
-        {
-          name: "Figma",
-          icon: SiFigma,
-        },
-        {
-          name: "Adobe InDesign",
-          icon: SiAdobeindesign,
-        },
-        {
-          name: "Adobe Photoshop",
-          icon: SiAdobephotoshop,
-        },
-        {
-          name: "Affinity Designer",
-          icon: SiAffinitydesigner,
-        },
-        {
-          name: "Autodesk Maya",
-          icon: SiAutodeskmaya,
-        },
-        {
-          name: "Blender",
-          icon: SiBlender,
-        },
-      ],
-    },
-    {
-      name: "Front-End Proficiencies",
-      proficiencies: [
-        {
-          name: "Bootstrap",
-          icon: SiBootstrap,
-        },
-        {
-          name: "CSS3",
-          icon: SiCss3,
-        },
-        {
-          name: "HTML5",
-          icon: SiHtml5,
-        },
-        {
-          name: "JavaScript",
-          icon: SiJavascript,
-        },
-        {
-          name: "React",
-          icon: SiReact,
-        },
-        {
-          name: "React Router",
-          icon: SiReactrouter,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: SiTailwindcss,
-        },
-        {
-          name: "Vite",
-          icon: SiVite,
-        },
-      ],
-    },
-    {
-      name: "Back-End Proficiencies",
-      proficiencies: [
-        {
-          name: "Sequelize",
-          icon: SiSequelize,
-        },
-        {
-          name: "Express",
-          icon: SiExpress,
-        },
-        {
-          name: "MongoDB",
-          icon: SiMongodb,
-        },
-        {
-          name: "Mongoose",
-          icon: SiMongoose,
-        },
-        {
-          name: "MySQL",
-          icon: SiMysql,
-        },
-        {
-          name: "Node.js",
-          icon: SiNodedotjs,
-        },
-        {
-          name: "Jest",
-          icon: SiJest,
-        },
-        {
-          name: "PWA",
-          icon: SiPwa,
-        },
-        {
-          name: "GraphQL",
-          icon: SiGraphql,
-        },
-        {
-          name: "Apollo GraphQL",
-          icon: SiApollographql,
-        },
-      ],
-    },
-  ];
+  const [formState, setFormState] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const resumeURL =
-    "https://drive.google.com/uc?export=download&id=1Ya01_29B_vlOx9hSifzDDpvhcyUGH2EO";
+  const [errors, setErrors] = useState({});
 
-  const downloadResume = () => {
-    window.open(resumeURL, "_blank");
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormState({ ...formState, [name]: value });
   };
 
-  const githubURL = "https://github.com/Rafflafressia";
-
-  const goToGitHub = () => {
-    window.open(githubURL, "_blank");
+  const validateForm = () => {
+    const errors = {};
+    if (!formState.name) {
+      errors.name = "Name is required";
+    }
+    if (!formState.mobile) {
+      errors.mobile = "Mobile is required";
+    }
+    if (!formState.email) {
+      errors.email = "Email is required";
+    }
+    if (!formState.subject) {
+      errors.subject = "Subject is required";
+    }
+    if (!formState.message) {
+      errors.message = "Message is required";
+    }
+    return errors;
   };
 
-  const facebookURL = "https://www.facebook.com/arkaw.banerjee/";
-
-  const goToFB = () => {
-    window.open(facebookURL, "_blank");
-  };
-
-  const instagramURL = "https://www.instagram.com/rafflafressia/?hl=en";
-
-  const goToInsta = () => {
-    window.open(instagramURL, "_blank");
-  };
-
-  const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
-
-  const goToLinkedIn = () => {
-    window.open(linkedInURL, "_blank");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length === 0) {
+      alert("Form Submitted Successfully");
+    } else {
+      setErrors(validationErrors);
+    }
+    console.log(formState);
   };
 
   return (
-    <div className="flex flex-col items-center py-24 space-x-2 space-y-8">
-      <h1 className="text-[#16425b] text-4xl font-bold">Contact</h1>
-      {categories.map((category, index) => (
-        <div key={index} className="mx-auto px-4">
-          <h2 className="m-auto text-[#16425b] my-4 text-2xl font-bold text-wrap text-center">
-            {category.name}
-          </h2>
-          <div className="flex flex-row flex-wrap space-x-2">
-            {category.proficiencies.map((proficiency, index) => {
-              const Icon = proficiency.icon;
-              return (
-                <Icon key={index} size={36} color="#3a7ca5" className="m-1" />
-              );
-            })}
+    <div className="[background:#b9bab7] text-white h-full">
+      <div className="flex flex-col md:flex-row md:items-start lg:justify-between xl:p-16 xl:mx-40">
+        <div className="flex flex-row">
+          <div className="p-4">
+            <h1 className="text-xl border-b-2 border-white xl:text-5xl">
+              Contact
+            </h1>
+            <ul className="py-4">
+              <li>LinkedIn</li>
+              <li>GitHub</li>
+              <li>Instagram</li>
+              <li>Facebook</li>
+            </ul>
+          </div>
+
+          <div className="p-4">
+            <h1 className="text-xl border-b-2 border-white xl:text-5xl">
+              Case Studies
+            </h1>
+            <ul className="py-4">
+              <li>
+                <Link to="/Bake" className="hover:underline">
+                  Baketomo
+                </Link>
+              </li>
+              <li>
+                <Link to="/Star" className="hover:underline">
+                  Star Inventory Logistics
+                </Link>
+              </li>
+              <li>
+                <Link to="/Prem" className="hover:underline">
+                  Premium Custom Surfacing
+                </Link>
+              </li>
+              <li>
+                <Link to="/Answ" className="hover:underline">
+                  Answerables
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="p-4">
+            <h1 className="text-xl border-b-2 border-white xl:text-5xl">
+              Portfolio
+            </h1>
+            <ul className="py-4">
+              <li>
+                <Link to="/web-dev" className="hover:underline">
+                  Full Stack Web Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/graphic-design" className="hover:underline">
+                  Graphic Design
+                </Link>
+              </li>
+              <li>
+                <Link to="/illustrations" className="hover:underline">
+                  Illustrations
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
-      ))}
 
-      <div className="flex flex-col justify-center items-center mx-auto space-y-4">
-        <p className="text-[#16425b] text-lg text-center">
-          If you're looking to get in touch please feel free to reach out to me
-          on:
-        </p>
-        <div className="flex flex-row space-x-4">
-          <SiFacebook size={36} color="#3a7ca5" onClick={goToFB} />
-          <SiLinkedin size={36} color="#3a7ca5" onClick={goToLinkedIn} />
-          <SiInstagram size={36} color="#3a7ca5" onClick={goToInsta} />
-        </div>
-      </div>
-      <div className="flex flex-col justify-center items-center mx-auto space-y-4">
-        <p className="text-[#16425b] text-lg text-center">
-          Before you go! You can grab my resume or checkout my github page!
-        </p>
-        <div className="flex flex-row space-x-4">
-          <MdCloudDownload size={36} color="#3a7ca5" onClick={downloadResume} />
-          <SiGithub size={36} color="#3a7ca5" onClick={goToGitHub} />
-        </div>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center justify-center pb-[100px] space-y-4 lg:m-8"
+        >
+          <div className="flex flex-row space-x-4">
+            <div className="flex flex-col">
+              <input
+                type="text"
+                name="name"
+                className="text-center"
+                placeholder="Your Full Name"
+                value={formState.name}
+                onChange={handleChange}
+              />
+              {errors.name && (
+                <span className="text-red-500 text-center">{errors.name}</span>
+              )}
+            </div>
+
+            <div className="flex flex-col">
+              <input
+                type="text"
+                name="mobile"
+                className="text-center"
+                placeholder="Phone Number"
+                value={formState.mobile}
+                onChange={handleChange}
+              />
+              {errors.mobile && (
+                <span className="text-red-500 text-center">
+                  {errors.mobile}
+                </span>
+              )}
+            </div>
+          </div>
+
+          <div className="flex flex-row space-x-4">
+            <div className="flex flex-col">
+              <input
+                type="text"
+                name="subject"
+                className="text-center"
+                placeholder="Subject Line"
+                value={formState.subject}
+                onChange={handleChange}
+              />
+              {errors.subject && (
+                <span className="text-red-500 text-center">
+                  {errors.subject}
+                </span>
+              )}
+            </div>
+
+            <div className="flex flex-col">
+              <input
+                type="email"
+                name="email"
+                className="text-center"
+                placeholder="Your Email Here"
+                value={formState.email}
+                onChange={handleChange}
+              />
+              {errors.email && (
+                <span className="text-red-500 text-center">{errors.email}</span>
+              )}
+            </div>
+          </div>
+
+          <div className="flex flex-col w-11/12 items-center justify-center space-y-4">
+            <textarea
+              name="message"
+              className="text-center w-full"
+              placeholder="Add a brief message of reason for contact"
+              onChange={handleChange}
+              value={formState.message}
+            ></textarea>
+            {errors.name && (
+              <span className="text-red-500 text-center">{errors.name}</span>
+            )}
+            <button
+              type="submit"
+              className="text-black w-full p-2 rounded-lg [background:#d9dcd6] "
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

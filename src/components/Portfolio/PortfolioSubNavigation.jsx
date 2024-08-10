@@ -22,7 +22,7 @@ const PortfolioSubNavigation = ({ categories, onSelectCategory }) => {
       <p className="pb-4 mb-4 text-lg italic text-gray border-b-2">
         A collection of standalone projects produced by me.
       </p>
-      <ul className="list-none flex flex-col md:flex-row justify-center items-center space-x-2 w-[200px] md:text-right md:px-2 items-center">
+      <ul className="list-none flex flex-col md:flex-row justify-center space-x-2 w-[200px] md:text-right md:px-2 items-center">
         {categories.map((category, index) => (
           <li key={index}>
             <button className="my-2 relative bg-auto overflow-hidden [background:#4D4D4D] shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] border-[3px] border-solid border-[#16425b] w-[300px] h-[200px] lg:w-[350px] lg:h-[500px] rounded-2xl">

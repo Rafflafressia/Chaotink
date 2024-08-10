@@ -27,19 +27,16 @@ const ScrollToTopButton = () => {
   }, []);
 
   return (
-    <div>
-    {isVisible && (
-      <div className="mt-4 border-t-2 border-gray-200">
-        <button
-          onClick={scrollToTop}
-          className="w-full text-left mt-4 py-2 px-4 text-white rounded-lg hover:bg-blue-100 hover:text-black focus:outline-none transition duration-300 ease-in-out"
-        >
-          Back to Top
-        </button>
-      </div> 
-    )}
-  </div>
-)
+    <div className="mx-auto">
+      {isVisible && (
+        <div>
+          <button onClick={scrollToTop} className="text-black">
+            Back to Top
+          </button>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default ScrollToTopButton;

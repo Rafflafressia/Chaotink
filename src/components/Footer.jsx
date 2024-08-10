@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { SiLinkedin, SiGithub } from "react-icons/si";
+import BackToTop from "../components/ScrollToTopButton";
 
 const Footer = () => {
   const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
@@ -13,19 +15,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className="flex mx-4 items-center justify-between p-4 border-t-2 border-grey">
-      <div>
-        <p className="text-[#16425b] md:text-xl md:text-sm font-semibold">
-          © 2024 Arkaw Banerjee
-        </p>
-      </div>
-      <div className="flex flex-row space-x-7">
-        <button onClick={goToLinkedIn}>
-          <SiLinkedin className="text-2xl xl:text-4xl md:text-2xl text-[#16425b] cursor-pointer" />
-        </button>
-        <button onClick={goToGithub}>
-          <SiGithub className="text-2xl xl:text-4xl md:text-2xl text-[#16425b] cursor-pointer" />
-        </button>
+    <footer className="flex flex-col">
+      <div className="flex flex-row items-center justify-between p-4">
+        <div>
+          <p className="text-[#16425b] lg:text-xl text-sm font-semibold">
+            Arkaw Banerjee
+          </p>
+        </div>
+
+        <BackToTop />
+        <div className="flex flex-row space-x-4">
+          <button onClick={goToLinkedIn}>
+            <SiLinkedin className="text-2xl xl:text-4xl md:text-2xl text-[#16425b] cursor-pointer" />
+          </button>
+          <button onClick={goToGithub}>
+            <SiGithub className="text-2xl xl:text-4xl md:text-2xl text-[#16425b] cursor-pointer" />
+          </button>
+        </div>
       </div>
     </footer>
   );

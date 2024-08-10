@@ -46,7 +46,7 @@ const GraphicDesignCards = () => {
   }, []);
 
   return (
-    <section className="px-8 py-24 lg:mx-32 xl:mx-72">
+    <section className="px-8 md:py-8 xl:py-24 lg:mx-32 xl:mx-72">
       <div className="graphic-design-cards flex flex-col mx-auto items-center">
         <div className="flex flex-col justify-center items-start space-y-4">
           <h1 className="text-[#16425b] text-5xl font-bold">

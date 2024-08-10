@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+import SideNav from "../AsideNav";
+
 import Bamboo from "../../assets/bamboo-homepage.png";
 import JATE from "../../assets/JATE-application.png";
 import MERN from "../../assets/MERN-application.png";
@@ -73,7 +75,7 @@ const FullStackDevelopmentCards = () => {
   }, []);
 
   return (
-    <section className="px-8 py-24 lg:mx-32 xl:mx-72">
+    <section className="px-8 md:py-8 xl:py-24 lg:mx-32 xl:mx-72">
       <div className="flex flex-col justify-center items-start space-y-4">
         <h1 className="text-[#16425b] text-4xl md:text-5xl font-bold">
           Full Stack

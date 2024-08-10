@@ -5,6 +5,7 @@ import GraphicDesign from "../Portfolio/GraphicDesign";
 import Illustrations from "../Portfolio/Illustrations";
 import FullStack from "../Portfolio/FullStackWebDevelopment";
 import SideNav from "../AsideNav";
+import BackToTop from "../ScrollToTopButton";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -46,12 +47,18 @@ const Portfolio = () => {
         {!isVisible && currentCategory === "Full Stack Development" && (
           <FullStack />
         )}
-        {!isVisible && currentCategory === "Graphic Design" && <GraphicDesign />}
+        {!isVisible && currentCategory === "Graphic Design" && (
+          <GraphicDesign />
+        )}
         {!isVisible && currentCategory === "Illustration" && <Illustrations />}
 
         {/* Button to go back to categories */}
         {!isVisible && (
-          <SideNav categories={categories}  onSelectCategory={handleCategorySelect} onBackToNavigation={handleBackToNavigation}/>
+          <SideNav
+            categories={categories}
+            onSelectCategory={handleCategorySelect}
+            onBackToNavigation={handleBackToNavigation}
+          />
         )}
       </div>
     </div>

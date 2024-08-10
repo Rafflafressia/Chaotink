@@ -1,11 +1,12 @@
+import { useState, useEffect, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const location = useLocation();
-
   const routeTitles = {
     "/": "Arkaw Banerjee | | Web Developer",
     "/about": "Arkaw Banerjee | | About",
@@ -14,10 +15,10 @@ function App() {
     "/Bake": "Arkaw Banerjee - Baketomo",
     "/Prem": "Arkaw Banerjee - Premier Custom Surfacing",
     "/Star": "Arkaw Banerjee - Star Inventory Logistics",
-    "/Answ" : "Arkaw Banerjee - Answerables",
-    "/illustrations" : "Arkaw Banerjee - Illustrations",
-    "/graphic-design" : "Arkaw Banerjee - Graphic Design",
-    "/web-dev" : "Arkaw Banerjee - Web Development", 
+    "/Answ": "Arkaw Banerjee - Answerables",
+    "/illustrations": "Arkaw Banerjee - Illustrations",
+    "/graphic-design": "Arkaw Banerjee - Graphic Design",
+    "/web-dev": "Arkaw Banerjee - Web Development",
   };
 
   const title =
@@ -31,6 +32,7 @@ function App() {
       <main>
         <Navbar />
         <Outlet />
+        <Contact />
         <Footer />
       </main>
     </>

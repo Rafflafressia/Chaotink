@@ -18,7 +18,7 @@ const AnswerablesPage = () => {
       <div className="w-full flex justify-center" id="home">
         <img src={HomeBG} alt="Answerables logo hero" />
       </div>
-      <div className="lg:mx-36">
+      <div className="lg:mx-36 xl:mx-52">
         <div className="flex flex-col justify-center items-start lg:my-4 md:mx-12 xl:mx-36">
           <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">
             Story of Answerables
@@ -100,7 +100,7 @@ const AnswerablesPage = () => {
           <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">
             Platform
           </h3>
-          <p className="m-4 xl:m-8">
+          <p className="m-4 xl:m-8 xl:text-xl">
             Answerables was completely playable on PC as well as on Tablets.
           </p>
         </div>
