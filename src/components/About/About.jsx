@@ -186,7 +186,7 @@ const About = () => {
         </p>
         <Link
           to="/Bake"
-          className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-8 mx-8 md:mx-32 lg:mx-32 xl:mx-96"
+          className="bg-[#2f6690] rounded-[10px] text-[#d9dcd6] flex justify-center items-center p-2 my-8 mx-8 md:mx-32 lg:mx-60"
         >
           <p className="mx-2 font-bold">See case study</p> <FaArrowRightLong />
         </Link>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import BackToTop from "../components/ScrollToTopButton";
 
@@ -18,9 +19,12 @@ const Footer = () => {
     <footer className="flex flex-col">
       <div className="flex flex-row items-center justify-between p-4">
         <div>
-          <p className="text-[#16425b] lg:text-xl text-sm font-semibold">
+          <Link
+            to="/"
+            className="text-[#16425b] lg:text-xl text-sm font-semibold"
+          >
             Arkaw Banerjee
-          </p>
+          </Link>
         </div>
 
         <BackToTop />

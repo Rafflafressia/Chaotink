@@ -48,19 +48,59 @@ const Contact = () => {
     console.log(formState);
   };
 
+  const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
+
+  const goToLinkedIn = () => {
+    window.open(linkedInURL, "_blank");
+  };
+
+  const githubURL = "https://github.com/Rafflafressia";
+
+  const goToGithub = () => {
+    window.open(githubURL, "_blank");
+  };
+
+  const instagramURL = "https://www.instagram.com/rafflafressia/";
+
+  const goToInstagram = () => {
+    window.open(instagramURL, "_blank");
+  };
+
+  const facebookURL = "https://www.facebook.com/arkaw.banerjee/";
+
+  const goToFacebook = () => {
+    window.open(facebookURL, "_blank");
+  };
+
   return (
     <div className="[background:#b9bab7] text-white h-full">
       <div className="flex flex-col md:flex-row md:items-start lg:justify-between xl:p-16 xl:mx-40">
         <div className="flex flex-row">
           <div className="p-4">
             <h1 className="text-xl border-b-2 border-white xl:text-5xl">
-              Contact
+              Socials
             </h1>
             <ul className="py-4">
-              <li>LinkedIn</li>
-              <li>GitHub</li>
-              <li>Instagram</li>
-              <li>Facebook</li>
+              <li>
+                <button onClick={goToLinkedIn} className="hover:underline">
+                  LinkedIn
+                </button>
+              </li>
+              <li>
+                <button onClick={goToGithub} className="hover:underline">
+                  GitHub
+                </button>
+              </li>
+              <li>
+                <button onClick={goToFacebook} className="hover:underline">
+                  Facebook
+                </button>
+              </li>
+              <li>
+                <button onClick={goToInstagram} className="hover:underline">
+                  Instagram
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -118,8 +158,11 @@ const Contact = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col mx-4 items-center justify-center pb-[100px] space-y-4 md:m-8"
+          className="flex flex-col mx-4 items-center justify-center pb-[100px] space-y-4 md:mx-8"
         >
+          <h1 className="text-xl border-b-2 border-white xl:text-5xl">
+            Contact
+          </h1>
           <div className="flex flex-col w-full space-y-4 md:space-y-0 md:flex-row md:space-x-4">
             <div className="flex flex-col">
               <input

@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 
-const Carousel = ({images}) => {
+const Carousel = ({ images, description }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -21,7 +21,7 @@ const Carousel = ({images}) => {
             <img
               src={image}
               alt={`Slide ${index}`}
-              className="mx-auto w-[875px] rounded-3xl shadow-md"
+              className="mx-auto rounded-3xl shadow-md"
             />
           </div>
         ))}

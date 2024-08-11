@@ -3,8 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useMemo, useCallback } from "react";
 
 import Carousel from "../Carousel";
-import BacktoTop from "../ScrollToTopButton";
-import BaketomoNav from "../PresentationNav";
+import SideNav from "../AsideNav";
 import Footer from "../../components/Footer";
 import Navbar from "../Navbar";
 
@@ -55,7 +54,14 @@ const BaketomoInfoPage = () => {
 
   return (
     <div className="py-8 xl:mx-72">
-      <BacktoTop />
+      <SideNav
+        categories={[
+          ["Baketomo", "Bake"],
+          ["Star Inventory Logistics", "Star"],
+          ["Premium Custom Surfacing", "Prem"],
+          ["Answerables", "Answ"],
+        ]}
+      />
       <div className="w-full py-12" id="home" style={backgroundStyle}>
         <div className="glass flex flex-col justify-center items-center shadow-[0px_4px_23px_5px_rgba(0,0,0,0.25)] bg-green-900 mx-4 md:mx-12 lg:mx-36 rounded-[10px] my-2 p-4 space-y-4">
           <img

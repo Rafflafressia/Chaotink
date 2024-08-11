@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useMemo } from "react";
 
 import Carousel from "../Carousel";
-import BacktoTop from "../ScrollToTopButton";
+import SideNav from "../AsideNav";
 
 import StarBG from "../../assets/sil-bg.png";
 import StarLogo from "../../assets/star-inventory-logo.svg";
@@ -37,7 +37,14 @@ const StarInventoryPage = () => {
 
   return (
     <div className="space-y-4 pt-16 pb-4 lg:mx-32 xl:mx-48 2xl:mx-[500px]">
-      <BacktoTop />
+      <SideNav
+        categories={[
+          ["Baketomo", "Bake"],
+          ["Star Inventory Logistics", "Star"],
+          ["Premium Custom Surfacing", "Prem"],
+          ["Answerables", "Answ"],
+        ]}
+      />
       <div
         className="w-full p-4 flex flex-col space-y-4 items-center justify-center bg-opacity-30"
         id="home"

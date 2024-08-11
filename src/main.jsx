@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import About from "./components/About/About.jsx";
 import Portfolio from "./components/Portfolio/Portfolio.jsx";
-import Contact from "./components/Contact/Contact.jsx";
+import CaseStudies from "./components/CaseStudies/CaseStudies.jsx";
 
 // Case Studies
 import Baketomo from "./components/CaseStudies/BaketomoInfoPage.jsx";
@@ -42,8 +42,8 @@ const router = createBrowserRouter([
         element: <Portfolio />,
       },
       {
-        path: "Contact",
-        element: <Contact />,
+        path: "case-studies",
+        element: <CaseStudies />,
       },
       {
         path: "Bake",

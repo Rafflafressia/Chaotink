@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import CaseStudy from "../components/CaseStudy";
+import CaseStudy from "../components/CaseStudyCards";
 
 import Answerables from "../assets/answerables/answerables-card.png";
 import Baketomo from "../assets/mobile-game-card.png";
@@ -103,7 +103,7 @@ const Home = () => {
 
       <section className="mx-2 md:mx-24 xl:py-16 xl:mx-36 2xl:mx-96">
         <h1 className="text-4xl my-4 xl:border-t-2 xl:border-gray pt-8 px-12 sm:text-center sm:mx-auto sm:px-0 text-[#16425b] md:h-full md:w-full md:my-8 md:visible 2xl:text-[60px] md:text-5xl font-bold">
-          Work
+          Case Studies
         </h1>
         <div className="case-studies overflow-hidden flex flex-col flex-wrap md:flex-row justify-center">
           {caseStudies.map((study, index) => (

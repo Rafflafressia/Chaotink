@@ -1,9 +1,13 @@
 import { useEffect } from "react";
-import BacktoTop from "../ScrollToTopButton";
+import SideNav from "../AsideNav";
+import Carousel from "../Carousel";
 
 import HomeBG from "../../assets/answerables/answerables-hero.jpg";
 import ScreenshotOne from "../../assets/answerables/answerables-screenshot-1.png";
+import ScreenshotTwo from "../../assets/answerables/answerables-screenshot-2.jpeg";
+import ScreenshotThree from "../../assets/answerables/answerables-screenshots-3.png";
 import ScreenshotFour from "../../assets/answerables/answerables-screenshots-4.png";
+import ScreenshotFive from "../../assets/answerables/answerables-screenshots-5.png";
 import ScreenshotSix from "../../assets/answerables/answerables-screenshot-6.png";
 import Trailer from "../../assets/answerables/Answerables_Trailer.webm";
 
@@ -12,9 +16,23 @@ const AnswerablesPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const answerablesScreens = [
+    ScreenshotTwo,
+    ScreenshotThree,
+    ScreenshotFour,
+    ScreenshotFive,
+  ];
+
   return (
     <div className="py-8">
-      <BacktoTop />
+      <SideNav
+        categories={[
+          ["Baketomo", "Bake"],
+          ["Star Inventory Logistics", "Star"],
+          ["Premium Custom Surfacing", "Prem"],
+          ["Answerables", "Answ"],
+        ]}
+      />
       <div className="w-full flex justify-center" id="home">
         <img src={HomeBG} alt="Answerables logo hero" />
       </div>
@@ -171,25 +189,31 @@ const AnswerablesPage = () => {
                 eventually party with the villagers.
               </p>
             </div>
-            <video controls className="w-1/2">
+            <video controls className="xl:w-1/2">
               <source src={Trailer} type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
 
-        <div className="xl:mx-36 border-t-2 border-gray my-8">
+        <div className="xl:mx-36 border-t-2 border-gray my-8 flex flex-col">
           <h3 className="text-3xl font-bold m-4 xl:text-[40px] xl:m-8">
             Production
           </h3>
-          <div className="flex flex-col items-center 2xl:flex-row">
-            <div className="2xl:text-2xl">
-              <p className="m-4 xl:m-8">
-                Unfortunately, Answerables was not able to hit shelves
-                officially. Here are a collection of images of Answerables and
-                what it could've been. You click and drag (or drag if you're on
-                mobile) to go through the screenshots.
-              </p>
+          <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col items-center 2xl:flex-row">
+              <div className="2xl:text-2xl">
+                <p className="m-4 xl:m-8">
+                  Unfortunately, Answerables was not able to hit shelves
+                  officially. Here are a collection of images of Answerables and
+                  what it could've been. You click and drag (or drag if you're
+                  on mobile) to go through the screenshotsm in the carousel.
+                </p>
+              </div>
+            </div>
+
+            <div className="m-8 xl:w-1/2">
+              <Carousel images={answerablesScreens} />
             </div>
           </div>
         </div>

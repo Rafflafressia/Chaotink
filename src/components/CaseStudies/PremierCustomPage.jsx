@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useMemo } from "react";
 
 import Carousel from "../Carousel";
-import BacktoTop from "../ScrollToTopButton";
+import SideNav from "../AsideNav";
 
 import PremLogo from "../../assets/premier-logo.svg";
 import PlayLogo from "../../assets/playsafe-logo.svg";
@@ -42,7 +42,14 @@ const StarInventoryPage = () => {
 
   return (
     <div className="space-y-4 py-16 lg:mx-32 xl:mx-48 2xl:mx-[500px]">
-      <BacktoTop />
+      <SideNav
+        categories={[
+          ["Baketomo", "Bake"],
+          ["Star Inventory Logistics", "Star"],
+          ["Premium Custom Surfacing", "Prem"],
+          ["Answerables", "Answ"],
+        ]}
+      />
       <div
         className="w-full p-4 flex flex-col space-y-4 items-center justify-center bg-opacity-30"
         id="home"
@@ -94,7 +101,9 @@ const StarInventoryPage = () => {
         content="Working with Sam from Premier Custom Surfacing, we came up with a bold design that used the brand colors respective to each company. Blue for Premier Custom Surfacing and Orange for Playsafe Canada. The following mockups are for 4 vehicles that are full wraps."
       />
 
-      <p className="italic text-gray-400 mx-8">Click and drag left and right to cycle through images (swipe on mobile)</p>
+      <p className="italic text-gray-400 mx-8">
+        Click and drag left and right to cycle through images (swipe on mobile)
+      </p>
       <Carousel images={truckMockups} />
 
       <Section title="Finished Product" headingClass={headingsOne} />
@@ -104,7 +113,7 @@ const StarInventoryPage = () => {
           <img
             src={img}
             alt="Section visual representation"
-            className="max-w-sm rounded-lg m-2"
+            className="w-1/2 md:max-w-screen-sm rounded-lg p-2"
           />
         ))}
       </div>
