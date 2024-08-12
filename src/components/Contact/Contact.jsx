@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
 const serviceId = "service_uh2mw14";
-const templateId = "template_l2bt15e";
+const templateId = "template_59cry7q";
 
 const Contact = () => {
   const form = useRef();
@@ -36,28 +36,36 @@ const Contact = () => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      // Sending the email using EmailJS
-      emailjs.send(
-        serviceId,       
-        templateId,      
-        form.current,
-        {
-          publicKey: 'g19kVGbTY3Yqx-Hou',
-        }           
-      )
-      .then(response => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert("Form Submitted Successfully");
-        setFormState({ name: "", mobile: "", email: "", subject: "", message: "" });
-      })
-      .catch(err => {
-        console.error('FAILED...', err);
-        alert("Failed to send the form. Please try again.");
-      });
+        // Prepare the data to send
+        const templateParams = {
+            name: formState.name,
+            mobile: formState.mobile,
+            email: formState.email,
+            subject: formState.subject,
+            message: formState.message,
+        };
+
+        // Sending the email using EmailJS
+        emailjs.send(
+            serviceId,
+            templateId,
+            templateParams, // Pass the template parameters
+            'g19kVGbTY3Yqx-Hou' // Your public key
+        )
+        .then(response => {
+            console.log('SUCCESS!', response.status, response.text);
+            alert("Form Submitted Successfully");
+            setFormState({ name: "", mobile: "", email: "", subject: "", message: "" });
+        })
+        .catch(err => {
+            console.error('FAILED...', err);
+            alert("Failed to send the form. Please try again.");
+        });
     } else {
-      setErrors(validationErrors);
+        setErrors(validationErrors);
     }
-  };
+};
+
 
   // The rest of your component remains the same
   const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
