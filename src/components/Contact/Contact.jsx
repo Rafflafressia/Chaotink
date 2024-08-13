@@ -67,7 +67,7 @@ const Contact = () => {
 };
 
 
-  // The rest of your component remains the same
+  
   const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
   const goToLinkedIn = () => window.open(linkedInURL, "_blank");
 

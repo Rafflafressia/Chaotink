@@ -28,7 +28,7 @@ const SubNav = ({ categories }) => {
         {categories.map(([category, path], index) => (
           <li key={index} className="w-full flex flex-row">
             <Link
-              to={`/${path}`} // Ensure this path aligns with your routing setup
+              to={`/${path}`} 
               className="w-full text-md text-center xl:text-left py-2 px-2 xl:text-lg text-white rounded-lg hover:bg-blue-100 xl:hover:text-black focus:outline-none transition duration-300 ease-in-out"
             >
               {category}
