@@ -1,11 +1,22 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-
-import Banner from "../../assets/sticker-banner.png"
+import Banner from "../../assets/sticker-banner.png";
 
 const serviceId = "service_uh2mw14";
 const templateId = "template_59cry7q";
+
+// Modal Component
+const Modal = ({ message, onClose }) => (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+    <div className="bg-white flex flex-col justify-center items-center p-8 rounded-md shadow-md">
+      <p className="text-black">{message}</p>
+      <button onClick={onClose} className="mt-4 p-2 bg-blue-500 text-white rounded-md">
+        Close
+      </button>
+    </div>
+  </div>
+);
 
 const Contact = () => {
   const form = useRef();
@@ -18,6 +29,8 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [modalMessage, setModalMessage] = useState(""); // State to hold the modal message
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,7 +51,6 @@ const Contact = () => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      // Prepare the data to send
       const templateParams = {
         name: formState.name,
         mobile: formState.mobile,
@@ -47,17 +59,12 @@ const Contact = () => {
         message: formState.message,
       };
 
-      // Sending the email using EmailJS
       emailjs
-        .send(
-          serviceId,
-          templateId,
-          templateParams, // Pass the template parameters
-          "g19kVGbTY3Yqx-Hou" // Your public key
-        )
+        .send(serviceId, templateId, templateParams, "g19kVGbTY3Yqx-Hou")
         .then((response) => {
           console.log("SUCCESS!", response.status, response.text);
-          alert("Form Submitted Successfully");
+          setModalMessage("Form Submitted Successfully");
+          setIsModalOpen(true);
           setFormState({
             name: "",
             mobile: "",
@@ -68,24 +75,13 @@ const Contact = () => {
         })
         .catch((err) => {
           console.error("FAILED...", err);
-          alert("Failed to send the form. Please try again.");
+          setModalMessage("Failed to send the form. Please try again.");
+          setIsModalOpen(true);
         });
     } else {
       setErrors(validationErrors);
     }
   };
-
-  const linkedInURL = "https://www.linkedin.com/in/arkaw-banerjee-600181103";
-  const goToLinkedIn = () => window.open(linkedInURL, "_blank");
-
-  const githubURL = "https://github.com/Rafflafressia";
-  const goToGithub = () => window.open(githubURL, "_blank");
-
-  const instagramURL = "https://www.instagram.com/rafflafressia/";
-  const goToInstagram = () => window.open(instagramURL, "_blank");
-
-  const facebookURL = "https://www.facebook.com/arkaw.banerjee/";
-  const goToFacebook = () => window.open(facebookURL, "_blank");
 
   return (
     <div className="[background:#b9bab7] text-white h-full">
@@ -98,22 +94,22 @@ const Contact = () => {
               </h1>
               <ul className="py-4">
                 <li>
-                  <button onClick={goToLinkedIn} className="hover:underline">
+                  <button onClick={() => window.open("https://www.linkedin.com/in/arkaw-banerjee-600181103", "_blank")} className="hover:underline">
                     LinkedIn
                   </button>
                 </li>
                 <li>
-                  <button onClick={goToGithub} className="hover:underline">
+                  <button onClick={() => window.open("https://github.com/Rafflafressia", "_blank")} className="hover:underline">
                     GitHub
                   </button>
                 </li>
                 <li>
-                  <button onClick={goToFacebook} className="hover:underline">
+                  <button onClick={() => window.open("https://www.facebook.com/arkaw.banerjee/", "_blank")} className="hover:underline">
                     Facebook
                   </button>
                 </li>
                 <li>
-                  <button onClick={goToInstagram} className="hover:underline">
+                  <button onClick={() => window.open("https://www.instagram.com/rafflafressia/", "_blank")} className="hover:underline">
                     Instagram
                   </button>
                 </li>
@@ -172,10 +168,9 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* When Etsy Shop is up, unhide this section */}
-          <div className="">
-              <img src={Banner} alt="Banner of illustrations" className="w-4/6 mx-auto" />
-              <p className="text-center text-xl invisible fixed">Check out my stickers!</p>
+          <div>
+            <img src={Banner} alt="Banner of illustrations" className="w-4/6 mx-auto" />
+            <p className="text-center text-xl invisible fixed">Check out my stickers!</p>
           </div>
         </div>
 
@@ -191,7 +186,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                className="text-center"
+                className="text-center bg-transparent border-2 rounded-md p-2 placeholder-white"
                 placeholder="Your Full Name"
                 value={formState.name}
                 onChange={handleChange}
@@ -205,7 +200,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="mobile"
-                className="text-center"
+                className="text-center bg-transparent border-2 rounded-md p-2 placeholder-white"
                 placeholder="Phone Number"
                 value={formState.mobile}
                 onChange={handleChange}
@@ -223,7 +218,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="subject"
-                className="text-center"
+                className="text-center bg-transparent border-2 rounded-md p-2 placeholder-white"
                 placeholder="Subject Line"
                 value={formState.subject}
                 onChange={handleChange}
@@ -239,7 +234,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                className="text-center"
+                className="text-center bg-transparent border-2 rounded-md p-2 placeholder-white"
                 placeholder="Your Email Here"
                 value={formState.email}
                 onChange={handleChange}
@@ -250,10 +245,10 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-full items-center justify-center space-y-4">
+          <div className="flex flex-col w-full items-center justify-center space-y-4 text-white">
             <textarea
               name="message"
-              className="text-center w-full"
+              className="text-center w-full bg-transparent border-2 rounded-md p-2 placeholder-white"
               placeholder="Add a brief message of reason for contact"
               onChange={handleChange}
               value={formState.message}
@@ -263,13 +258,21 @@ const Contact = () => {
             )}
             <button
               type="submit"
-              className="text-black w-full p-2 rounded-lg [background:#d9dcd6]"
+              className="text-white w-full p-2 rounded-lg [background:#16425b]"
             >
               Submit
             </button>
           </div>
         </form>
       </div>
+
+      {/* Render the modal when it's open */}
+      {isModalOpen && (
+        <Modal
+          message={modalMessage}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   );
 };
