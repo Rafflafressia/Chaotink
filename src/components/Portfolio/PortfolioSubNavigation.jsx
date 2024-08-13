@@ -14,7 +14,7 @@ const PortfolioSubNavigation = ({ categories, onSelectCategory }) => {
   };
 
   return (
-    <div className="portfolio-sub-navigation py-1 text-center flex flex-col items-center">
+    <div className="portfolio-sub-navigation py-16 text-center flex flex-col items-center">
       <h1 className="text-[#16425b] text-[50px] font-bold lg:text-[100px]">
         Portfolio
       </h1>

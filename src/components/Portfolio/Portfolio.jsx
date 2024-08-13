@@ -27,7 +27,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="portfolio-container py-16 flex flex-col items-center">
+    <div className="portfolio-container flex flex-col items-center">
       <div>
         {/* Conditionally render PortfolioSubNavigation */}
         {isVisible && (

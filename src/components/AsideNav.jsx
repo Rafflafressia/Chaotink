@@ -29,7 +29,7 @@ const SubNav = ({ categories }) => {
           <li key={index} className="w-full flex flex-row">
             <Link
               to={`/${path}`} 
-              className="w-full text-md text-center xl:text-left py-2 px-2 xl:text-lg text-white rounded-lg hover:bg-blue-100 xl:hover:text-black focus:outline-none transition duration-300 ease-in-out"
+              className="w-full text-[10px] text-center xl:text-left py-2 px-2 xl:text-lg text-white rounded-lg hover:bg-blue-100 xl:hover:text-black focus:outline-none transition duration-300 ease-in-out"
             >
               {category}
             </Link>
