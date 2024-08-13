@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const SubNav = ({ categories }) => {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -13,6 +14,15 @@ const SubNav = ({ categories }) => {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const handleLinkClick = (path) => {
+    if (currentPage === `/${path}`) {
+      // Refresh the page if already on the current page
+      window.location.reload();
+    } else {
+      navigate(path);
+    }
   };
 
   useEffect(() => {
@@ -29,6 +39,7 @@ const SubNav = ({ categories }) => {
           <li key={index} className="w-full flex flex-row">
             <Link
               to={`/${path}`} 
+              onClick={() => navigate(`/${path}`)}
               className="w-full text-[10px] text-center xl:text-left py-2 px-2 xl:text-lg text-white rounded-lg hover:bg-blue-100 xl:hover:text-black focus:outline-none transition duration-300 ease-in-out"
             >
               {category}

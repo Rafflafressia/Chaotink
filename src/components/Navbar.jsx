@@ -75,14 +75,14 @@ const Navbar = () => {
 
           <nav className="flex space-x-12 invisible md:visible">
             {pages.map(([title, url]) => (
-              <button
-                key={url}
+              <Link
+                to={`/${url}`}
                 className="nav-link text-sm md:text-lg text-[#d9dcd6] flex items-center font-medium"
                 title={title}
                 onClick={() => handleLinkClick(url)}
               >
                 {title}
-              </button>
+              </Link>
             ))}
           </nav>
 
