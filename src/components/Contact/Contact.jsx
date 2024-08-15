@@ -176,7 +176,7 @@ const Contact = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col text-black mx-4 items-center justify-center pb-[100px] space-y-4 md:mx-8"
+          className="contact flex flex-col text-black mx-4 items-center justify-center pb-[100px] space-y-4 md:mx-8"
         >
           <h1 className="text-xl text-white border-b-2 border-white xl:text-5xl">
             Contact
